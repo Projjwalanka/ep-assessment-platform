@@ -1,0 +1,3110 @@
+[
+ {
+  "band": "0-5",
+  "topic": "Core Java",
+  "difficulty": "EASY",
+  "text": "Which of these is NOT a primitive type in Java?",
+  "options": [
+   "String",
+   "char",
+   "boolean",
+   "int"
+  ],
+  "correctIndex": 0,
+  "explanation": "String is a class in java.lang, not a primitive."
+ },
+ {
+  "band": "0-5",
+  "topic": "Core Java",
+  "difficulty": "EASY",
+  "text": "What is the default value of an int instance field?",
+  "options": [
+   "0",
+   "-1",
+   "undefined",
+   "null"
+  ],
+  "correctIndex": 0,
+  "explanation": "Numeric instance fields default to zero."
+ },
+ {
+  "band": "0-5",
+  "topic": "Core Java",
+  "difficulty": "EASY",
+  "text": "Which keyword prevents a class from being subclassed?",
+  "options": [
+   "static",
+   "final",
+   "abstract",
+   "private"
+  ],
+  "correctIndex": 1,
+  "explanation": "A final class cannot be extended."
+ },
+ {
+  "band": "0-5",
+  "topic": "Core Java",
+  "difficulty": "MEDIUM",
+  "text": "What does \"abc\" == new String(\"abc\") evaluate to?",
+  "options": [
+   "NullPointerException",
+   "Compile error",
+   "true",
+   "false"
+  ],
+  "correctIndex": 3,
+  "explanation": "== compares references; new String creates a distinct object."
+ },
+ {
+  "band": "0-5",
+  "topic": "Core Java",
+  "difficulty": "EASY",
+  "text": "Which method must be overridden together with equals() to keep hash-based collections correct?",
+  "options": [
+   "compareTo()",
+   "clone()",
+   "hashCode()",
+   "toString()"
+  ],
+  "correctIndex": 2,
+  "explanation": "Equal objects must return equal hash codes."
+ },
+ {
+  "band": "0-5",
+  "topic": "Core Java",
+  "difficulty": "MEDIUM",
+  "text": "What is printed? int x = 5; x = x++ + ++x; System.out.println(x);",
+  "options": [
+   "13",
+   "12",
+   "11",
+   "10"
+  ],
+  "correctIndex": 1,
+  "explanation": "x++ yields 5 (x becomes 6), ++x yields 7, so 5 + 7 = 12."
+ },
+ {
+  "band": "0-5",
+  "topic": "Core Java",
+  "difficulty": "EASY",
+  "text": "Checked exceptions must be...",
+  "options": [
+   "Subclasses of RuntimeException",
+   "Only caught",
+   "Caught or declared with throws",
+   "Ignored by the compiler"
+  ],
+  "correctIndex": 2,
+  "explanation": "The compiler enforces handle-or-declare for checked exceptions."
+ },
+ {
+  "band": "0-5",
+  "topic": "Core Java",
+  "difficulty": "MEDIUM",
+  "text": "Which statement about a finally block is true?",
+  "options": [
+   "It is skipped when an exception is thrown",
+   "It runs before the try block",
+   "It runs whether or not an exception occurs, unless the JVM exits",
+   "It only runs when an exception occurs"
+  ],
+  "correctIndex": 2,
+  "explanation": "finally always executes except for System.exit or a JVM crash."
+ },
+ {
+  "band": "0-5",
+  "topic": "Core Java",
+  "difficulty": "EASY",
+  "text": "String immutability means that...",
+  "options": [
+   "Operations like concat return a new String object",
+   "A String cannot be assigned to a variable",
+   "Strings are stored on the stack",
+   "Strings cannot be used as map keys"
+  ],
+  "correctIndex": 0,
+  "explanation": "String state never changes; modifying methods return new instances."
+ },
+ {
+  "band": "0-5",
+  "topic": "Core Java",
+  "difficulty": "MEDIUM",
+  "text": "Which class is preferred for building a string inside a loop in single-threaded code?",
+  "options": [
+   "CharSequence",
+   "StringBuffer",
+   "String",
+   "StringBuilder"
+  ],
+  "correctIndex": 3,
+  "explanation": "StringBuilder is mutable and unsynchronized, so it is fastest here."
+ },
+ {
+  "band": "0-5",
+  "topic": "Core Java",
+  "difficulty": "MEDIUM",
+  "text": "Which access modifier makes a member visible within the same package and to subclasses in other packages?",
+  "options": [
+   "public",
+   "private",
+   "package-private (default)",
+   "protected"
+  ],
+  "correctIndex": 3,
+  "explanation": "protected = package access plus subclass access."
+ },
+ {
+  "band": "0-5",
+  "topic": "Core Java",
+  "difficulty": "EASY",
+  "text": "Can a Java 8+ interface contain method implementations?",
+  "options": [
+   "Only private methods",
+   "Yes, through default and static methods",
+   "No, never",
+   "Only if it extends an abstract class"
+  ],
+  "correctIndex": 1,
+  "explanation": "Java 8 introduced default and static interface methods."
+ },
+ {
+  "band": "0-5",
+  "topic": "Core Java",
+  "difficulty": "MEDIUM",
+  "text": "Method overloading is resolved at...",
+  "options": [
+   "Runtime",
+   "Garbage collection time",
+   "Compile time",
+   "Class loading time"
+  ],
+  "correctIndex": 2,
+  "explanation": "Overload selection is static; overriding is dynamic."
+ },
+ {
+  "band": "0-5",
+  "topic": "Core Java",
+  "difficulty": "HARD",
+  "text": "Integer a = 127, b = 127; Integer c = 128, d = 128; What are a == b and c == d?",
+  "options": [
+   "false, true",
+   "false, false",
+   "true, false",
+   "true, true"
+  ],
+  "correctIndex": 2,
+  "explanation": "Integer caches values from -128 to 127, so only 127 is reused."
+ },
+ {
+  "band": "0-5",
+  "topic": "Collections",
+  "difficulty": "EASY",
+  "text": "Which collection does not allow duplicate elements?",
+  "options": [
+   "Vector",
+   "HashSet",
+   "LinkedList",
+   "ArrayList"
+  ],
+  "correctIndex": 1,
+  "explanation": "Set implementations reject duplicates."
+ },
+ {
+  "band": "0-5",
+  "topic": "Collections",
+  "difficulty": "EASY",
+  "text": "Which Map implementation maintains insertion order?",
+  "options": [
+   "HashMap",
+   "LinkedHashMap",
+   "TreeMap",
+   "Hashtable"
+  ],
+  "correctIndex": 1,
+  "explanation": "LinkedHashMap keeps a doubly linked list of entries."
+ },
+ {
+  "band": "0-5",
+  "topic": "Collections",
+  "difficulty": "MEDIUM",
+  "text": "Time complexity of get(index) on ArrayList vs LinkedList?",
+  "options": [
+   "O(1) and O(n)",
+   "O(n) and O(1)",
+   "Both O(1)",
+   "Both O(log n)"
+  ],
+  "correctIndex": 0,
+  "explanation": "ArrayList is array-backed; LinkedList must traverse nodes."
+ },
+ {
+  "band": "0-5",
+  "topic": "Collections",
+  "difficulty": "MEDIUM",
+  "text": "What happens if you remove elements from an ArrayList inside a for-each loop over the same list?",
+  "options": [
+   "It works fine",
+   "ConcurrentModificationException is typically thrown",
+   "Elements are silently skipped and no error occurs",
+   "Compile error"
+  ],
+  "correctIndex": 1,
+  "explanation": "The fail-fast iterator detects structural modification; use Iterator.remove or removeIf."
+ },
+ {
+  "band": "0-5",
+  "topic": "Collections",
+  "difficulty": "MEDIUM",
+  "text": "Which is true for HashMap?",
+  "options": [
+   "One null key and multiple null values allowed",
+   "No null values allowed",
+   "Multiple null keys allowed",
+   "No null keys allowed"
+  ],
+  "correctIndex": 0,
+  "explanation": "HashMap permits a single null key."
+ },
+ {
+  "band": "0-5",
+  "topic": "Collections",
+  "difficulty": "EASY",
+  "text": "TreeMap keeps its keys in...",
+  "options": [
+   "Access order",
+   "Random order",
+   "Insertion order",
+   "Sorted order"
+  ],
+  "correctIndex": 3,
+  "explanation": "TreeMap is a red-black tree ordered by key."
+ },
+ {
+  "band": "0-5",
+  "topic": "Collections",
+  "difficulty": "MEDIUM",
+  "text": "What does List.of(1, 2, 3).add(4) do?",
+  "options": [
+   "Throws NullPointerException",
+   "Returns true",
+   "Throws UnsupportedOperationException",
+   "Produces [1, 2, 3, 4]"
+  ],
+  "correctIndex": 2,
+  "explanation": "List.of returns an unmodifiable list."
+ },
+ {
+  "band": "0-5",
+  "topic": "Java 8+",
+  "difficulty": "EASY",
+  "text": "A functional interface has...",
+  "options": [
+   "No methods",
+   "Only default methods",
+   "Exactly one abstract method",
+   "At least two abstract methods"
+  ],
+  "correctIndex": 2,
+  "explanation": "Single abstract method (SAM) types can be targeted by lambdas."
+ },
+ {
+  "band": "0-5",
+  "topic": "Java 8+",
+  "difficulty": "MEDIUM",
+  "text": "Which of these is a terminal stream operation?",
+  "options": [
+   "map",
+   "filter",
+   "collect",
+   "peek"
+  ],
+  "correctIndex": 2,
+  "explanation": "collect triggers the pipeline; the others are intermediate."
+ },
+ {
+  "band": "0-5",
+  "topic": "Java 8+",
+  "difficulty": "MEDIUM",
+  "text": "What does Stream.of(1,2,3).filter(x -> { System.out.print(x); return true; }); print?",
+  "options": [
+   "123",
+   "Nothing",
+   "Compile error",
+   "1"
+  ],
+  "correctIndex": 1,
+  "explanation": "Streams are lazy; without a terminal operation nothing executes."
+ },
+ {
+  "band": "0-5",
+  "topic": "Java 8+",
+  "difficulty": "EASY",
+  "text": "Optional is primarily intended to...",
+  "options": [
+   "Replace every null field in entities",
+   "Represent a possibly absent return value",
+   "Improve performance",
+   "Serialize objects"
+  ],
+  "correctIndex": 1,
+  "explanation": "Optional signals absence in method return types."
+ },
+ {
+  "band": "0-5",
+  "topic": "Java 8+",
+  "difficulty": "MEDIUM",
+  "text": "What is the result of Arrays.asList(3,1,2).stream().sorted().map(x -> x * 2).findFirst().get()?",
+  "options": [
+   "4",
+   "2",
+   "6",
+   "1"
+  ],
+  "correctIndex": 1,
+  "explanation": "Sorted gives 1,2,3; doubling the first gives 2."
+ },
+ {
+  "band": "0-5",
+  "topic": "Java 8+",
+  "difficulty": "EASY",
+  "text": "Which method reference is equivalent to s -> s.toUpperCase()?",
+  "options": [
+   "this::toUpperCase",
+   "String::toUpperCase",
+   "String.toUpperCase()",
+   "s::toUpperCase"
+  ],
+  "correctIndex": 1,
+  "explanation": "An unbound instance method reference on the type."
+ },
+ {
+  "band": "0-5",
+  "topic": "Spring Core",
+  "difficulty": "EASY",
+  "text": "What does Dependency Injection primarily achieve?",
+  "options": [
+   "Direct database access",
+   "Loose coupling between components",
+   "Thread safety",
+   "Faster code execution"
+  ],
+  "correctIndex": 1,
+  "explanation": "Dependencies are supplied from outside rather than created internally."
+ },
+ {
+  "band": "0-5",
+  "topic": "Spring Core",
+  "difficulty": "EASY",
+  "text": "What is the default scope of a Spring bean?",
+  "options": [
+   "singleton",
+   "prototype",
+   "request",
+   "session"
+  ],
+  "correctIndex": 0,
+  "explanation": "One shared instance per container by default."
+ },
+ {
+  "band": "0-5",
+  "topic": "Spring Core",
+  "difficulty": "MEDIUM",
+  "text": "Which injection style is recommended for mandatory dependencies?",
+  "options": [
+   "Field injection with @Autowired",
+   "Constructor injection",
+   "Static injection",
+   "Setter injection"
+  ],
+  "correctIndex": 1,
+  "explanation": "Constructor injection enables immutability and easy testing."
+ },
+ {
+  "band": "0-5",
+  "topic": "Spring Core",
+  "difficulty": "MEDIUM",
+  "text": "Which annotation marks a persistence-layer bean and enables exception translation?",
+  "options": [
+   "@Service",
+   "@Component",
+   "@Repository",
+   "@Controller"
+  ],
+  "correctIndex": 2,
+  "explanation": "@Repository translates persistence exceptions to DataAccessException."
+ },
+ {
+  "band": "0-5",
+  "topic": "Spring Core",
+  "difficulty": "MEDIUM",
+  "text": "Two beans of the same type exist. How do you choose one at the injection point?",
+  "options": [
+   "@Lazy",
+   "@Primary or @Qualifier",
+   "@Scope",
+   "@Order only"
+  ],
+  "correctIndex": 1,
+  "explanation": "@Qualifier picks by name; @Primary sets a default."
+ },
+ {
+  "band": "0-5",
+  "topic": "Spring Boot",
+  "difficulty": "EASY",
+  "text": "Which annotations does @SpringBootApplication combine?",
+  "options": [
+   "@Configuration, @EnableAutoConfiguration, @ComponentScan",
+   "@EnableWebMvc only",
+   "@Controller, @Service, @Repository",
+   "@Bean, @Import, @Profile"
+  ],
+  "correctIndex": 0,
+  "explanation": "It is a convenience meta-annotation."
+ },
+ {
+  "band": "0-5",
+  "topic": "Spring Boot",
+  "difficulty": "EASY",
+  "text": "What is the default embedded server for spring-boot-starter-web?",
+  "options": [
+   "Netty",
+   "Tomcat",
+   "Undertow",
+   "Jetty"
+  ],
+  "correctIndex": 1,
+  "explanation": "Tomcat is the default servlet container."
+ },
+ {
+  "band": "0-5",
+  "topic": "Spring Boot",
+  "difficulty": "EASY",
+  "text": "Where do you typically configure server.port?",
+  "options": [
+   "web.xml",
+   "application.properties or application.yml",
+   "pom.xml",
+   "MANIFEST.MF"
+  ],
+  "correctIndex": 1,
+  "explanation": "Boot reads externalized configuration from these files."
+ },
+ {
+  "band": "0-5",
+  "topic": "Spring Boot",
+  "difficulty": "MEDIUM",
+  "text": "Which property activates the 'dev' profile?",
+  "options": [
+   "boot.env=dev",
+   "spring.profile=dev",
+   "spring.profiles.active=dev",
+   "An @Dev annotation"
+  ],
+  "correctIndex": 2,
+  "explanation": "spring.profiles.active selects active profiles."
+ },
+ {
+  "band": "0-5",
+  "topic": "Spring Boot",
+  "difficulty": "MEDIUM",
+  "text": "Which Actuator endpoint do load balancers commonly use as a health check?",
+  "options": [
+   "/actuator/env",
+   "/actuator/beans",
+   "/actuator/health",
+   "/actuator/mappings"
+  ],
+  "correctIndex": 2,
+  "explanation": "/actuator/health reports UP or DOWN."
+ },
+ {
+  "band": "0-5",
+  "topic": "Spring Boot",
+  "difficulty": "MEDIUM",
+  "text": "What does a Spring Boot 'starter' dependency provide?",
+  "options": [
+   "A main method",
+   "A test runner",
+   "A code generator",
+   "A curated set of transitive dependencies for a feature"
+  ],
+  "correctIndex": 3,
+  "explanation": "Starters bundle compatible libraries for a capability."
+ },
+ {
+  "band": "0-5",
+  "topic": "Spring Boot",
+  "difficulty": "HARD",
+  "text": "Which source overrides a value set in application.properties packaged inside the jar?",
+  "options": [
+   "An OS environment variable",
+   "SpringApplication default properties",
+   "Nothing can override it",
+   "@PropertySource on a @Configuration class"
+  ],
+  "correctIndex": 0,
+  "explanation": "Environment variables rank above packaged application.properties."
+ },
+ {
+  "band": "0-5",
+  "topic": "REST APIs",
+  "difficulty": "EASY",
+  "text": "Which HTTP method is idempotent and typically used to fully replace a resource?",
+  "options": [
+   "PATCH",
+   "PUT",
+   "CONNECT",
+   "POST"
+  ],
+  "correctIndex": 1,
+  "explanation": "PUT replaces the target resource; repeating it has the same effect."
+ },
+ {
+  "band": "0-5",
+  "topic": "REST APIs",
+  "difficulty": "EASY",
+  "text": "Which status code indicates a resource was created successfully?",
+  "options": [
+   "201",
+   "302",
+   "204",
+   "200"
+  ],
+  "correctIndex": 0,
+  "explanation": "201 Created, usually with a Location header."
+ },
+ {
+  "band": "0-5",
+  "topic": "REST APIs",
+  "difficulty": "EASY",
+  "text": "Which annotation binds a URL segment such as /accounts/{id}?",
+  "options": [
+   "@RequestHeader",
+   "@RequestBody",
+   "@RequestParam",
+   "@PathVariable"
+  ],
+  "correctIndex": 3,
+  "explanation": "@PathVariable maps URI template variables."
+ },
+ {
+  "band": "0-5",
+  "topic": "REST APIs",
+  "difficulty": "MEDIUM",
+  "text": "A client sends a payload that fails validation. Which status is most appropriate?",
+  "options": [
+   "500",
+   "400",
+   "302",
+   "404"
+  ],
+  "correctIndex": 1,
+  "explanation": "400 Bad Request signals a client-side input problem."
+ },
+ {
+  "band": "0-5",
+  "topic": "REST APIs",
+  "difficulty": "MEDIUM",
+  "text": "@RestController is equivalent to...",
+  "options": [
+   "@Service + @Transactional",
+   "@Controller + @RequestMapping",
+   "@Controller + @ResponseBody",
+   "@Component + @Bean"
+  ],
+  "correctIndex": 2,
+  "explanation": "Every handler method's return value is written to the response body."
+ },
+ {
+  "band": "0-5",
+  "topic": "REST APIs",
+  "difficulty": "MEDIUM",
+  "text": "Which status means the client is authenticated but not permitted to access the resource?",
+  "options": [
+   "403",
+   "401",
+   "405",
+   "409"
+  ],
+  "correctIndex": 0,
+  "explanation": "403 Forbidden; 401 means unauthenticated."
+ },
+ {
+  "band": "0-5",
+  "topic": "Spring Data JPA",
+  "difficulty": "EASY",
+  "text": "Which annotation marks a JPA entity's primary key?",
+  "options": [
+   "@Primary",
+   "@Key",
+   "@PK",
+   "@Id"
+  ],
+  "correctIndex": 3,
+  "explanation": "@Id designates the identifier."
+ },
+ {
+  "band": "0-5",
+  "topic": "Spring Data JPA",
+  "difficulty": "MEDIUM",
+  "text": "In Spring Data, a repository method named findByEmailAndActiveTrue(...) results in...",
+  "options": [
+   "A stored procedure call",
+   "A derived query with two conditions",
+   "A native update statement",
+   "A compile error"
+  ],
+  "correctIndex": 1,
+  "explanation": "Query derivation parses the method name."
+ },
+ {
+  "band": "0-5",
+  "topic": "Spring Data JPA",
+  "difficulty": "MEDIUM",
+  "text": "What is the default fetch type of @ManyToOne?",
+  "options": [
+   "NONE",
+   "BATCH",
+   "LAZY",
+   "EAGER"
+  ],
+  "correctIndex": 3,
+  "explanation": "To-one associations default to EAGER in JPA."
+ },
+ {
+  "band": "0-5",
+  "topic": "Spring Data JPA",
+  "difficulty": "MEDIUM",
+  "text": "By default, @Transactional rolls back on...",
+  "options": [
+   "Checked exceptions only",
+   "Any Exception",
+   "Unchecked exceptions (RuntimeException and Error)",
+   "Never"
+  ],
+  "correctIndex": 2,
+  "explanation": "Checked exceptions commit unless rollbackFor is set."
+ },
+ {
+  "band": "0-5",
+  "topic": "SQL & Databases",
+  "difficulty": "EASY",
+  "text": "Which clause filters groups after aggregation?",
+  "options": [
+   "ORDER BY",
+   "WHERE",
+   "LIMIT",
+   "HAVING"
+  ],
+  "correctIndex": 3,
+  "explanation": "HAVING applies to grouped results."
+ },
+ {
+  "band": "0-5",
+  "topic": "SQL & Databases",
+  "difficulty": "EASY",
+  "text": "An INNER JOIN returns...",
+  "options": [
+   "All rows from both tables",
+   "Only non-matching rows",
+   "Only rows that match in both tables",
+   "All rows from the left table"
+  ],
+  "correctIndex": 2,
+  "explanation": "Only matched pairs are returned."
+ },
+ {
+  "band": "0-5",
+  "topic": "SQL & Databases",
+  "difficulty": "MEDIUM",
+  "text": "What typically speeds up lookups on a frequently filtered column?",
+  "options": [
+   "A sequence",
+   "A view",
+   "An index",
+   "A trigger"
+  ],
+  "correctIndex": 2,
+  "explanation": "Indexes avoid full table scans."
+ },
+ {
+  "band": "0-5",
+  "topic": "SQL & Databases",
+  "difficulty": "MEDIUM",
+  "text": "A primary key constraint implies the column values are...",
+  "options": [
+   "Only unique",
+   "Unique and not null",
+   "Only indexed",
+   "Nullable and may repeat"
+  ],
+  "correctIndex": 1,
+  "explanation": "Primary keys are unique and non-null."
+ },
+ {
+  "band": "0-5",
+  "topic": "Testing",
+  "difficulty": "EASY",
+  "text": "Which annotation marks a JUnit 5 test method?",
+  "options": [
+   "@Test",
+   "@TestCase",
+   "@Check",
+   "@RunWith"
+  ],
+  "correctIndex": 0,
+  "explanation": "org.junit.jupiter.api.Test."
+ },
+ {
+  "band": "0-5",
+  "topic": "Testing",
+  "difficulty": "MEDIUM",
+  "text": "Mockito's when(...).thenReturn(...) is used to...",
+  "options": [
+   "Create a spy of a database",
+   "Verify calls",
+   "Stub a mock's behaviour",
+   "Measure coverage"
+  ],
+  "correctIndex": 2,
+  "explanation": "Stubbing defines return values for mock calls."
+ },
+ {
+  "band": "0-5",
+  "topic": "Testing",
+  "difficulty": "MEDIUM",
+  "text": "@WebMvcTest loads...",
+  "options": [
+   "Only JPA repositories",
+   "The full application context",
+   "Only the web layer (controllers, advice, filters)",
+   "Nothing"
+  ],
+  "correctIndex": 2,
+  "explanation": "It is a test slice for MVC components."
+ },
+ {
+  "band": "0-5",
+  "topic": "Microservices",
+  "difficulty": "EASY",
+  "text": "A key characteristic of microservices is...",
+  "options": [
+   "No network calls",
+   "One shared database for all services",
+   "One large deployment unit",
+   "Independently deployable services organised around business capabilities"
+  ],
+  "correctIndex": 3,
+  "explanation": "Autonomy and independent deployment define microservices."
+ },
+ {
+  "band": "6-10",
+  "topic": "Concurrency",
+  "difficulty": "MEDIUM",
+  "text": "What does volatile guarantee?",
+  "options": [
+   "Atomicity of compound operations",
+   "Visibility of writes across threads",
+   "Mutual exclusion",
+   "Freedom from deadlock"
+  ],
+  "correctIndex": 1,
+  "explanation": "volatile provides visibility and ordering, not atomicity."
+ },
+ {
+  "band": "6-10",
+  "topic": "Concurrency",
+  "difficulty": "MEDIUM",
+  "text": "Why is count++ on a shared int unsafe across threads?",
+  "options": [
+   "It is a non-atomic read-modify-write",
+   "int is immutable",
+   "The JVM caches ints",
+   "Threads cannot share ints"
+  ],
+  "correctIndex": 0,
+  "explanation": "Two threads can read the same value and lose an update."
+ },
+ {
+  "band": "6-10",
+  "topic": "Concurrency",
+  "difficulty": "MEDIUM",
+  "text": "What is the best replacement for a heavily contended shared counter?",
+  "options": [
+   "ThreadLocal",
+   "AtomicLong or LongAdder",
+   "An Integer wrapper",
+   "volatile int"
+  ],
+  "correctIndex": 1,
+  "explanation": "LongAdder scales best under high contention."
+ },
+ {
+  "band": "6-10",
+  "topic": "Concurrency",
+  "difficulty": "MEDIUM",
+  "text": "What does ExecutorService.shutdown() do?",
+  "options": [
+   "Stops accepting new tasks and lets submitted ones finish",
+   "Blocks until all tasks are done",
+   "Clears the queue",
+   "Kills running tasks immediately"
+  ],
+  "correctIndex": 0,
+  "explanation": "shutdownNow() is the one that interrupts tasks."
+ },
+ {
+  "band": "6-10",
+  "topic": "Concurrency",
+  "difficulty": "HARD",
+  "text": "What is the difference between CompletableFuture.thenApply and thenCompose?",
+  "options": [
+   "thenCompose flattens a function that returns a CompletionStage",
+   "thenCompose handles exceptions",
+   "thenApply always runs asynchronously",
+   "There is no difference"
+  ],
+  "correctIndex": 0,
+  "explanation": "thenCompose is the flatMap of futures."
+ },
+ {
+  "band": "6-10",
+  "topic": "Concurrency",
+  "difficulty": "MEDIUM",
+  "text": "Which map is designed for high-concurrency access without locking the whole map?",
+  "options": [
+   "Collections.synchronizedMap",
+   "Hashtable",
+   "ConcurrentHashMap",
+   "TreeMap"
+  ],
+  "correctIndex": 2,
+  "explanation": "ConcurrentHashMap uses fine-grained locking and CAS."
+ },
+ {
+  "band": "6-10",
+  "topic": "Concurrency",
+  "difficulty": "HARD",
+  "text": "Which set of conditions is required for a deadlock?",
+  "options": [
+   "Starvation only",
+   "Mutual exclusion, hold-and-wait, no preemption, circular wait",
+   "High CPU usage",
+   "Misuse of volatile"
+  ],
+  "correctIndex": 1,
+  "explanation": "The four Coffman conditions."
+ },
+ {
+  "band": "6-10",
+  "topic": "Collections",
+  "difficulty": "MEDIUM",
+  "text": "In Java 8+, when does a HashMap bucket become a balanced tree?",
+  "options": [
+   "When the load factor is exceeded",
+   "When the map exceeds 16 entries",
+   "When all keys are Strings",
+   "When a bucket's chain exceeds 8 nodes and capacity is at least 64"
+  ],
+  "correctIndex": 3,
+  "explanation": "Treeification limits worst-case lookups to O(log n)."
+ },
+ {
+  "band": "6-10",
+  "topic": "Collections",
+  "difficulty": "MEDIUM",
+  "text": "What happens if a key's hashCode changes after it is inserted into a HashMap?",
+  "options": [
+   "The key is removed",
+   "An exception is thrown",
+   "The map rehashes automatically",
+   "The entry may become unreachable via get"
+  ],
+  "correctIndex": 3,
+  "explanation": "The entry sits in the bucket for its old hash."
+ },
+ {
+  "band": "6-10",
+  "topic": "Collections",
+  "difficulty": "MEDIUM",
+  "text": "Which class is best for a FIFO queue in single-threaded code?",
+  "options": [
+   "Stack",
+   "Vector",
+   "ArrayDeque",
+   "TreeSet"
+  ],
+  "correctIndex": 2,
+  "explanation": "ArrayDeque is fast and has no synchronization overhead."
+ },
+ {
+  "band": "6-10",
+  "topic": "Collections",
+  "difficulty": "HARD",
+  "text": "Comparator.comparing(Emp::getDept).thenComparing(Emp::getSalary, Comparator.reverseOrder()) sorts by...",
+  "options": [
+   "Salary descending only",
+   "Dept ascending, then salary descending",
+   "Dept descending, then salary ascending",
+   "Dept ascending, then salary ascending"
+  ],
+  "correctIndex": 1,
+  "explanation": "The reverse comparator applies only to the salary key."
+ },
+ {
+  "band": "6-10",
+  "topic": "Java 8+",
+  "difficulty": "MEDIUM",
+  "text": "Collectors.groupingBy(Txn::getAccount, Collectors.summingLong(Txn::getAmount)) returns (account is a String)...",
+  "options": [
+   "Long",
+   "Map<String, Long>",
+   "List<Long>",
+   "Map<String, List<Txn>>"
+  ],
+  "correctIndex": 1,
+  "explanation": "The downstream collector sums per key."
+ },
+ {
+  "band": "6-10",
+  "topic": "Java 8+",
+  "difficulty": "MEDIUM",
+  "text": "What is the difference between map and flatMap on streams?",
+  "options": [
+   "None",
+   "map is a terminal operation",
+   "flatMap only works on Optional",
+   "flatMap flattens nested streams into one stream"
+  ],
+  "correctIndex": 3,
+  "explanation": "flatMap maps each element to a stream and concatenates them."
+ },
+ {
+  "band": "6-10",
+  "topic": "Java 8+",
+  "difficulty": "HARD",
+  "text": "Why can list.parallelStream().forEach(result::add) with an ArrayList result give wrong output?",
+  "options": [
+   "Parallel streams run sequentially",
+   "ArrayList is immutable",
+   "Unsynchronized concurrent mutation causes races",
+   "forEach is not allowed on parallel streams"
+  ],
+  "correctIndex": 2,
+  "explanation": "Use collect() instead of side-effecting a shared list."
+ },
+ {
+  "band": "6-10",
+  "topic": "Java 8+",
+  "difficulty": "MEDIUM",
+  "text": "Records (Java 16+) are best described as...",
+  "options": [
+   "Interfaces",
+   "Immutable data carriers with generated equals, hashCode and toString",
+   "Mutable JavaBeans",
+   "Enums with state"
+  ],
+  "correctIndex": 1,
+  "explanation": "Records are transparent carriers of their components."
+ },
+ {
+  "band": "6-10",
+  "topic": "Java 8+",
+  "difficulty": "MEDIUM",
+  "text": "Pattern matching for instanceof allows you to...",
+  "options": [
+   "Use multiple inheritance",
+   "Write if (obj instanceof String s) and use s directly",
+   "Cast primitives",
+   "Check generic types at runtime"
+  ],
+  "correctIndex": 1,
+  "explanation": "It combines the type test and the cast."
+ },
+ {
+  "band": "6-10",
+  "topic": "JVM Internals",
+  "difficulty": "MEDIUM",
+  "text": "Where are objects created with new allocated?",
+  "options": [
+   "Heap",
+   "Code cache",
+   "Stack",
+   "Metaspace"
+  ],
+  "correctIndex": 0,
+  "explanation": "Escape analysis aside, objects live on the heap."
+ },
+ {
+  "band": "6-10",
+  "topic": "JVM Internals",
+  "difficulty": "MEDIUM",
+  "text": "What replaced PermGen in Java 8?",
+  "options": [
+   "Survivor space",
+   "Code cache",
+   "Heap",
+   "Metaspace"
+  ],
+  "correctIndex": 3,
+  "explanation": "Class metadata moved to native Metaspace."
+ },
+ {
+  "band": "6-10",
+  "topic": "JVM Internals",
+  "difficulty": "MEDIUM",
+  "text": "OutOfMemoryError: Metaspace most likely indicates...",
+  "options": [
+   "Too many objects on the heap",
+   "Class metadata growth such as a classloader leak",
+   "Stack overflow",
+   "Too many threads"
+  ],
+  "correctIndex": 1,
+  "explanation": "Often seen with repeated redeploys or dynamic proxies."
+ },
+ {
+  "band": "6-10",
+  "topic": "JVM Internals",
+  "difficulty": "MEDIUM",
+  "text": "What is the default garbage collector on server-class machines in Java 11+?",
+  "options": [
+   "Parallel",
+   "Serial",
+   "G1",
+   "CMS"
+  ],
+  "correctIndex": 2,
+  "explanation": "G1 became the default in Java 9."
+ },
+ {
+  "band": "6-10",
+  "topic": "Spring Core",
+  "difficulty": "MEDIUM",
+  "text": "Why might @Transactional on a private method have no effect?",
+  "options": [
+   "It works fine",
+   "JPA forbids it",
+   "Transactions require public fields",
+   "Proxy-based Spring AOP does not intercept private methods"
+  ],
+  "correctIndex": 3,
+  "explanation": "Only calls that pass through the proxy are advised."
+ },
+ {
+  "band": "6-10",
+  "topic": "Spring Core",
+  "difficulty": "HARD",
+  "text": "Method A calls @Transactional method B in the same bean. What happens?",
+  "options": [
+   "The transactional advice is bypassed because the call does not go through the proxy",
+   "A new transaction starts",
+   "B runs twice",
+   "An exception is thrown"
+  ],
+  "correctIndex": 0,
+  "explanation": "Self-invocation skips the proxy."
+ },
+ {
+  "band": "6-10",
+  "topic": "Spring Core",
+  "difficulty": "MEDIUM",
+  "text": "A prototype bean is injected into a singleton. What does the singleton hold?",
+  "options": [
+   "null",
+   "The same instance for its lifetime unless ObjectProvider or lookup injection is used",
+   "An error at startup",
+   "A new instance per method call automatically"
+  ],
+  "correctIndex": 1,
+  "explanation": "Injection happens once at singleton creation."
+ },
+ {
+  "band": "6-10",
+  "topic": "Spring Core",
+  "difficulty": "MEDIUM",
+  "text": "What is the key difference between @Bean methods in @Configuration vs @Component classes?",
+  "options": [
+   "There is none",
+   "@Configuration classes are lazy",
+   "@Component classes cannot declare @Bean methods",
+   "@Configuration classes are CGLIB-proxied, so inter-bean calls return the container singleton"
+  ],
+  "correctIndex": 3,
+  "explanation": "In 'lite' mode, calling another @Bean method creates a new instance."
+ },
+ {
+  "band": "6-10",
+  "topic": "Spring Boot",
+  "difficulty": "MEDIUM",
+  "text": "How do you bind a group of related properties to a typed object?",
+  "options": [
+   "@ConfigurationProperties",
+   "@Value on each field only",
+   "@Profile",
+   "@PropertySource alone"
+  ],
+  "correctIndex": 0,
+  "explanation": "Type-safe binding with validation support."
+ },
+ {
+  "band": "6-10",
+  "topic": "Spring Boot",
+  "difficulty": "MEDIUM",
+  "text": "@ConditionalOnMissingBean is used to...",
+  "options": [
+   "Lazily initialize beans",
+   "Mark beans as deprecated",
+   "Register a bean only if no bean of that type exists",
+   "Fail startup"
+  ],
+  "correctIndex": 2,
+  "explanation": "This is how auto-configuration backs off to user beans."
+ },
+ {
+  "band": "6-10",
+  "topic": "Spring Boot",
+  "difficulty": "MEDIUM",
+  "text": "How is exception handling centralized across controllers?",
+  "options": [
+   "try-catch in every method",
+   "A servlet filter only",
+   "@RestControllerAdvice with @ExceptionHandler methods",
+   "@ResponseStatus on services"
+  ],
+  "correctIndex": 2,
+  "explanation": "Advice classes apply to all controllers."
+ },
+ {
+  "band": "6-10",
+  "topic": "Spring Boot",
+  "difficulty": "MEDIUM",
+  "text": "What is the best practice for secrets in cloud deployments?",
+  "options": [
+   "Commit them base64-encoded",
+   "Print them to logs for debugging",
+   "Use environment variables or a secret manager",
+   "Hard-code them in application.yml"
+  ],
+  "correctIndex": 2,
+  "explanation": "Secrets should never live in source control."
+ },
+ {
+  "band": "6-10",
+  "topic": "Spring Boot",
+  "difficulty": "HARD",
+  "text": "A Spring Boot fat jar can run with java -jar because...",
+  "options": [
+   "It uses OSGi",
+   "Spring Boot's launcher loads classes from the nested jars",
+   "Maven extracts the jars at build time",
+   "The JVM natively supports nested jars"
+  ],
+  "correctIndex": 1,
+  "explanation": "The Boot loader provides a custom class loader."
+ },
+ {
+  "band": "6-10",
+  "topic": "Spring Boot",
+  "difficulty": "MEDIUM",
+  "text": "With spring.jpa.open-in-view=true (the default)...",
+  "options": [
+   "The persistence context stays open through view rendering, which can hide lazy-loading problems",
+   "The session closes right after each repository call",
+   "Queries become faster",
+   "Transactions are disabled"
+  ],
+  "correctIndex": 0,
+  "explanation": "Boot logs a warning because of this."
+ },
+ {
+  "band": "6-10",
+  "topic": "Spring Data JPA",
+  "difficulty": "HARD",
+  "text": "What is the N+1 select problem?",
+  "options": [
+   "A caching strategy",
+   "N queries for N tables",
+   "One query for the parent list plus one query per parent for an association",
+   "A database connection limit"
+  ],
+  "correctIndex": 2,
+  "explanation": "It surfaces when lazy associations are accessed in a loop."
+ },
+ {
+  "band": "6-10",
+  "topic": "Spring Data JPA",
+  "difficulty": "MEDIUM",
+  "text": "How do you fix N+1 queries in Spring Data JPA?",
+  "options": [
+   "Disable the cache",
+   "@EntityGraph or JOIN FETCH",
+   "Add indexes only",
+   "Make everything EAGER"
+  ],
+  "correctIndex": 1,
+  "explanation": "Fetch the association in the same query."
+ },
+ {
+  "band": "6-10",
+  "topic": "Spring Data JPA",
+  "difficulty": "MEDIUM",
+  "text": "Optimistic locking in JPA is implemented with...",
+  "options": [
+   "Table locks",
+   "synchronized blocks",
+   "SELECT ... FOR UPDATE always",
+   "A @Version field"
+  ],
+  "correctIndex": 3,
+  "explanation": "The version is checked and incremented on update."
+ },
+ {
+  "band": "6-10",
+  "topic": "Spring Data JPA",
+  "difficulty": "MEDIUM",
+  "text": "CascadeType.REMOVE on a @OneToMany association means...",
+  "options": [
+   "The parent is deleted when a child is removed",
+   "Orphans are kept",
+   "Children are deleted when the parent is removed",
+   "Nothing happens"
+  ],
+  "correctIndex": 2,
+  "explanation": "Removal cascades from parent to children."
+ },
+ {
+  "band": "6-10",
+  "topic": "Spring Data JPA",
+  "difficulty": "HARD",
+  "text": "When does LazyInitializationException occur?",
+  "options": [
+   "When too many eager fetches are configured",
+   "When @Id is missing",
+   "When the database is down",
+   "When a lazy association is accessed after the persistence context is closed"
+  ],
+  "correctIndex": 3,
+  "explanation": "The proxy can no longer load its data."
+ },
+ {
+  "band": "6-10",
+  "topic": "Spring Data JPA",
+  "difficulty": "MEDIUM",
+  "text": "What does Propagation.REQUIRES_NEW do?",
+  "options": [
+   "Suspends the current transaction and starts a new one",
+   "Throws if a transaction exists",
+   "Joins the current transaction",
+   "Runs without a transaction"
+  ],
+  "correctIndex": 0,
+  "explanation": "Useful for audit logging that must commit independently."
+ },
+ {
+  "band": "6-10",
+  "topic": "REST APIs",
+  "difficulty": "MEDIUM",
+  "text": "What is the best approach for returning large result sets?",
+  "options": [
+   "Return all rows",
+   "Compression only",
+   "Page/size or cursor parameters with metadata",
+   "One call per row"
+  ],
+  "correctIndex": 2,
+  "explanation": "Pagination bounds response size and latency."
+ },
+ {
+  "band": "6-10",
+  "topic": "REST APIs",
+  "difficulty": "MEDIUM",
+  "text": "In payment APIs, an idempotency key header prevents...",
+  "options": [
+   "CORS errors",
+   "Slow responses",
+   "Duplicate processing when clients retry",
+   "SQL injection"
+  ],
+  "correctIndex": 2,
+  "explanation": "The server returns the original result for a repeated key."
+ },
+ {
+  "band": "6-10",
+  "topic": "REST APIs",
+  "difficulty": "MEDIUM",
+  "text": "HATEOAS means...",
+  "options": [
+   "Responses include links to related resources and actions",
+   "HTTP/3",
+   "An API gateway",
+   "Response hashing"
+  ],
+  "correctIndex": 0,
+  "explanation": "Clients navigate the API through hypermedia."
+ },
+ {
+  "band": "6-10",
+  "topic": "REST APIs",
+  "difficulty": "MEDIUM",
+  "text": "Which status code is used for rate-limited requests?",
+  "options": [
+   "503",
+   "429",
+   "400",
+   "418"
+  ],
+  "correctIndex": 1,
+  "explanation": "429 Too Many Requests, often with Retry-After."
+ },
+ {
+  "band": "6-10",
+  "topic": "REST APIs",
+  "difficulty": "MEDIUM",
+  "text": "Which API versioning approach is commonly used?",
+  "options": [
+   "URI path versioning such as /v1/",
+   "Custom header or media-type versioning",
+   "Both are common approaches",
+   "Versioning is discouraged in REST"
+  ],
+  "correctIndex": 2,
+  "explanation": "Both approaches are widely used, each with trade-offs."
+ },
+ {
+  "band": "6-10",
+  "topic": "Microservices",
+  "difficulty": "MEDIUM",
+  "text": "What is the purpose of an API gateway?",
+  "options": [
+   "A single entry point handling routing, authentication and rate limiting",
+   "Database sharding",
+   "Compiling services",
+   "Replacing service discovery entirely"
+  ],
+  "correctIndex": 0,
+  "explanation": "It centralizes cross-cutting edge concerns."
+ },
+ {
+  "band": "6-10",
+  "topic": "Microservices",
+  "difficulty": "MEDIUM",
+  "text": "Service discovery (for example Eureka) solves...",
+  "options": [
+   "Locating dynamic service instances",
+   "Logging",
+   "Data consistency",
+   "Authentication"
+  ],
+  "correctIndex": 0,
+  "explanation": "Clients resolve logical names to live instances."
+ },
+ {
+  "band": "6-10",
+  "topic": "Microservices",
+  "difficulty": "MEDIUM",
+  "text": "The circuit breaker pattern prevents...",
+  "options": [
+   "Schema drift",
+   "Database deadlocks",
+   "Memory leaks",
+   "Cascading failures by failing fast when a dependency is unhealthy"
+  ],
+  "correctIndex": 3,
+  "explanation": "It trips open after repeated failures."
+ },
+ {
+  "band": "6-10",
+  "topic": "Microservices",
+  "difficulty": "MEDIUM",
+  "text": "Which library is commonly used for circuit breaking in Spring Boot 3?",
+  "options": [
+   "Zuul",
+   "Ribbon",
+   "Resilience4j",
+   "Hystrix"
+  ],
+  "correctIndex": 2,
+  "explanation": "Hystrix is in maintenance mode; Resilience4j is the standard."
+ },
+ {
+  "band": "6-10",
+  "topic": "Microservices",
+  "difficulty": "MEDIUM",
+  "text": "Distributed tracing correlates a request across services using...",
+  "options": [
+   "A shared database",
+   "Trace and span IDs propagated in headers",
+   "JVM thread IDs",
+   "Sticky sessions"
+  ],
+  "correctIndex": 1,
+  "explanation": "For example W3C traceparent headers."
+ },
+ {
+  "band": "6-10",
+  "topic": "Microservices",
+  "difficulty": "MEDIUM",
+  "text": "What is the main trade-off of the database-per-service pattern?",
+  "options": [
+   "Joins become simpler",
+   "Services lose autonomy",
+   "Cross-service queries and consistency become harder (eventual consistency)",
+   "Fewer databases"
+  ],
+  "correctIndex": 2,
+  "explanation": "Data ownership improves but queries span services."
+ },
+ {
+  "band": "6-10",
+  "topic": "Security",
+  "difficulty": "MEDIUM",
+  "text": "Where does Spring Security apply authentication in a servlet web app?",
+  "options": [
+   "In the JVM",
+   "In the servlet filter chain",
+   "In the JPA layer",
+   "In the DispatcherServlet"
+  ],
+  "correctIndex": 1,
+  "explanation": "SecurityFilterChain runs before controllers."
+ },
+ {
+  "band": "6-10",
+  "topic": "Security",
+  "difficulty": "MEDIUM",
+  "text": "A JWT signature ensures...",
+  "options": [
+   "Claims are confidential",
+   "The payload is encrypted",
+   "The token never expires",
+   "Token integrity and authenticity"
+  ],
+  "correctIndex": 3,
+  "explanation": "Signed JWTs are readable by anyone; they are not encrypted."
+ },
+ {
+  "band": "6-10",
+  "topic": "Security",
+  "difficulty": "MEDIUM",
+  "text": "How should user passwords be stored?",
+  "options": [
+   "Hashed with an adaptive algorithm such as BCrypt",
+   "Hashed with MD5",
+   "As plain text in a secure database",
+   "Encrypted with AES"
+  ],
+  "correctIndex": 0,
+  "explanation": "Adaptive, salted hashing resists brute force."
+ },
+ {
+  "band": "6-10",
+  "topic": "Testing",
+  "difficulty": "MEDIUM",
+  "text": "How does @DataJpaTest differ from @SpringBootTest?",
+  "options": [
+   "They are identical",
+   "@SpringBootTest is faster",
+   "@DataJpaTest loads the web layer",
+   "@DataJpaTest loads only the JPA slice, typically with an embedded database"
+  ],
+  "correctIndex": 3,
+  "explanation": "Slices keep tests fast and focused."
+ },
+ {
+  "band": "6-10",
+  "topic": "Testing",
+  "difficulty": "MEDIUM",
+  "text": "Testcontainers is used for...",
+  "options": [
+   "Starting real dependencies (database, Kafka) in Docker for integration tests",
+   "Mocking HTTP",
+   "Code coverage",
+   "UI testing"
+  ],
+  "correctIndex": 0,
+  "explanation": "It gives production-like integration tests."
+ },
+ {
+  "band": "6-10",
+  "topic": "Testing",
+  "difficulty": "MEDIUM",
+  "text": "What does @MockBean (or @MockitoBean in newer versions) do?",
+  "options": [
+   "Spies on static methods",
+   "Nothing",
+   "Creates a database",
+   "Replaces a bean in the Spring context with a Mockito mock"
+  ],
+  "correctIndex": 3,
+  "explanation": "The mock is injected wherever the bean is used."
+ },
+ {
+  "band": "6-10",
+  "topic": "Messaging",
+  "difficulty": "MEDIUM",
+  "text": "In Kafka, message ordering is guaranteed...",
+  "options": [
+   "Across all topics",
+   "Never",
+   "Within a partition",
+   "Across partitions of a topic"
+  ],
+  "correctIndex": 2,
+  "explanation": "Ordering is per partition."
+ },
+ {
+  "band": "6-10",
+  "topic": "Messaging",
+  "difficulty": "MEDIUM",
+  "text": "What does a Kafka consumer group guarantee?",
+  "options": [
+   "Groups are for producers",
+   "Every consumer gets all messages",
+   "Each partition is consumed by only one consumer in the group",
+   "One topic per group"
+  ],
+  "correctIndex": 2,
+  "explanation": "Partitions are the unit of parallelism."
+ },
+ {
+  "band": "10-15",
+  "topic": "Concurrency",
+  "difficulty": "HARD",
+  "text": "Which of these establishes a happens-before relationship?",
+  "options": [
+   "Releasing and then acquiring the same lock",
+   "A volatile write followed by a read of the same variable",
+   "Thread.start() before actions in the started thread",
+   "All of the above"
+  ],
+  "correctIndex": 3,
+  "explanation": "All three are happens-before rules in the JMM."
+ },
+ {
+  "band": "10-15",
+  "topic": "Concurrency",
+  "difficulty": "HARD",
+  "text": "Virtual threads (Java 21) are best suited for...",
+  "options": [
+   "Hard real-time systems",
+   "Replacing GPU work",
+   "CPU-bound computation",
+   "High-concurrency, blocking I/O workloads"
+  ],
+  "correctIndex": 3,
+  "explanation": "They make thread-per-request cheap for I/O-bound services."
+ },
+ {
+  "band": "10-15",
+  "topic": "Concurrency",
+  "difficulty": "HARD",
+  "text": "In Java 21, a virtual thread gets pinned to its carrier notably when...",
+  "options": [
+   "It reads a file",
+   "It uses ReentrantLock",
+   "It uses an ExecutorService",
+   "It blocks inside a synchronized block or native call"
+  ],
+  "correctIndex": 3,
+  "explanation": "Prefer ReentrantLock around blocking calls in Java 21."
+ },
+ {
+  "band": "10-15",
+  "topic": "Concurrency",
+  "difficulty": "HARD",
+  "text": "The ForkJoinPool common pool is used by default for...",
+  "options": [
+   "Tomcat request threads",
+   "Garbage collection",
+   "Parallel streams and CompletableFuture async methods without an executor",
+   "JDBC calls"
+  ],
+  "correctIndex": 2,
+  "explanation": "Blocking work there can starve other users of the pool."
+ },
+ {
+  "band": "10-15",
+  "topic": "Concurrency",
+  "difficulty": "HARD",
+  "text": "Why prefer a bounded queue for a ThreadPoolExecutor in production?",
+  "options": [
+   "The JVM requires it",
+   "It provides backpressure and avoids memory exhaustion",
+   "It disables the rejection policy",
+   "Unbounded queues are faster"
+  ],
+  "correctIndex": 1,
+  "explanation": "Unbounded queues hide overload until the heap runs out."
+ },
+ {
+  "band": "10-15",
+  "topic": "Concurrency",
+  "difficulty": "MEDIUM",
+  "text": "ReentrantReadWriteLock gives the most benefit when...",
+  "options": [
+   "Writes dominate",
+   "Only one thread exists",
+   "Reads greatly outnumber writes",
+   "There is no shared state"
+  ],
+  "correctIndex": 2,
+  "explanation": "Multiple readers can hold the lock simultaneously."
+ },
+ {
+  "band": "10-15",
+  "topic": "JVM Internals",
+  "difficulty": "HARD",
+  "text": "The G1 collector divides the heap into...",
+  "options": [
+   "Many equal-sized regions",
+   "Per-thread heaps",
+   "Two fixed-size generations",
+   "A single contiguous space"
+  ],
+  "correctIndex": 0,
+  "explanation": "Regions let G1 collect the garbage-richest areas first."
+ },
+ {
+  "band": "10-15",
+  "topic": "JVM Internals",
+  "difficulty": "HARD",
+  "text": "A heap dump shows a growing HashMap held by a static field. What is the likely issue?",
+  "options": [
+   "A Metaspace problem",
+   "A GC bug",
+   "A stack overflow",
+   "A memory leak from an unbounded static cache"
+  ],
+  "correctIndex": 3,
+  "explanation": "Static roots keep entries reachable forever."
+ },
+ {
+  "band": "10-15",
+  "topic": "JVM Internals",
+  "difficulty": "HARD",
+  "text": "Which JVM flag writes a heap dump automatically on OutOfMemoryError?",
+  "options": [
+   "-XX:+HeapDumpOnOutOfMemoryError",
+   "-Xss",
+   "-Xdump",
+   "-XX:+PrintGC"
+  ],
+  "correctIndex": 0,
+  "explanation": "Pair it with -XX:HeapDumpPath."
+ },
+ {
+  "band": "10-15",
+  "topic": "JVM Internals",
+  "difficulty": "MEDIUM",
+  "text": "JIT compilation improves performance by...",
+  "options": [
+   "Interpreting faster",
+   "Removing garbage collection",
+   "Precompiling all classes at startup",
+   "Compiling hot bytecode to native code at runtime"
+  ],
+  "correctIndex": 3,
+  "explanation": "HotSpot profiles and optimizes hot paths."
+ },
+ {
+  "band": "10-15",
+  "topic": "JVM Internals",
+  "difficulty": "HARD",
+  "text": "Escape analysis allows the JVM to...",
+  "options": [
+   "Disable garbage collection",
+   "Scalar-replace or stack-allocate objects that do not escape",
+   "Inline native methods",
+   "Skip bytecode verification"
+  ],
+  "correctIndex": 1,
+  "explanation": "It also enables lock elision."
+ },
+ {
+  "band": "10-15",
+  "topic": "JVM Internals",
+  "difficulty": "HARD",
+  "text": "ZGC's primary design goal is...",
+  "options": [
+   "Single-threaded collection",
+   "Maximum throughput",
+   "The smallest memory footprint",
+   "Very low pause times largely independent of heap size"
+  ],
+  "correctIndex": 3,
+  "explanation": "Most work happens concurrently."
+ },
+ {
+  "band": "10-15",
+  "topic": "Spring Boot",
+  "difficulty": "HARD",
+  "text": "How does Spring Boot 3 discover auto-configuration classes?",
+  "options": [
+   "spring.factories only",
+   "META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+   "Component scanning of all jars",
+   "XML files"
+  ],
+  "correctIndex": 1,
+  "explanation": "The imports file replaced spring.factories for auto-configuration."
+ },
+ {
+  "band": "10-15",
+  "topic": "Spring Boot",
+  "difficulty": "HARD",
+  "text": "Which Spring stack targets non-blocking, high-concurrency I/O?",
+  "options": [
+   "Spring MVC on Tomcat",
+   "Struts",
+   "JSF",
+   "Spring WebFlux on Netty with Project Reactor"
+  ],
+  "correctIndex": 3,
+  "explanation": "WebFlux is built on Reactive Streams."
+ },
+ {
+  "band": "10-15",
+  "topic": "Spring Boot",
+  "difficulty": "MEDIUM",
+  "text": "How is graceful shutdown enabled in Spring Boot?",
+  "options": [
+   "@PreDestroy only",
+   "kill -9",
+   "server.shutdown=graceful",
+   "spring.main.lazy-initialization=true"
+  ],
+  "correctIndex": 2,
+  "explanation": "In-flight requests get a grace period to complete."
+ },
+ {
+  "band": "10-15",
+  "topic": "Spring Boot",
+  "difficulty": "HARD",
+  "text": "What is a known risk of @Async without a configured executor in older Spring versions?",
+  "options": [
+   "It may create a new thread per task",
+   "It cannot return futures",
+   "It always runs synchronously",
+   "It uses the Tomcat request thread"
+  ],
+  "correctIndex": 0,
+  "explanation": "SimpleAsyncTaskExecutor does not pool threads."
+ },
+ {
+  "band": "10-15",
+  "topic": "Spring Data JPA",
+  "difficulty": "HARD",
+  "text": "Hibernate's first-level cache is scoped to...",
+  "options": [
+   "The application",
+   "The Session / EntityManager (persistence context)",
+   "The database",
+   "The JVM"
+  ],
+  "correctIndex": 1,
+  "explanation": "It is always on and per persistence context."
+ },
+ {
+  "band": "10-15",
+  "topic": "Spring Data JPA",
+  "difficulty": "HARD",
+  "text": "What is the effect of IDENTITY id generation on Hibernate batch inserts?",
+  "options": [
+   "It is the fastest strategy",
+   "No configuration is needed",
+   "Inserts are batched automatically",
+   "JDBC insert batching is effectively disabled"
+  ],
+  "correctIndex": 3,
+  "explanation": "Hibernate must execute each insert to learn the id; use SEQUENCE for batching."
+ },
+ {
+  "band": "10-15",
+  "topic": "Spring Data JPA",
+  "difficulty": "MEDIUM",
+  "text": "Which is a read-only query optimization in Spring?",
+  "options": [
+   "@Modifying",
+   "@Transactional(readOnly = true)",
+   "@Version",
+   "@Lock"
+  ],
+  "correctIndex": 1,
+  "explanation": "Hibernate can skip dirty checking."
+ },
+ {
+  "band": "10-15",
+  "topic": "Spring Data JPA",
+  "difficulty": "HARD",
+  "text": "A pessimistic write lock in JPA typically translates to...",
+  "options": [
+   "SELECT ... FOR UPDATE",
+   "A @Version check",
+   "No SQL change",
+   "READ UNCOMMITTED isolation"
+  ],
+  "correctIndex": 0,
+  "explanation": "The row is locked until the transaction ends."
+ },
+ {
+  "band": "10-15",
+  "topic": "Microservices",
+  "difficulty": "HARD",
+  "text": "The Saga pattern addresses...",
+  "options": [
+   "Caching",
+   "Logging",
+   "Service discovery",
+   "Distributed transactions via a sequence of local transactions with compensating actions"
+  ],
+  "correctIndex": 3,
+  "explanation": "It replaces two-phase commit across services."
+ },
+ {
+  "band": "10-15",
+  "topic": "Microservices",
+  "difficulty": "HARD",
+  "text": "In a choreography-based saga...",
+  "options": [
+   "Only synchronous calls are made",
+   "Two-phase commit is used",
+   "Services react to each other's events without a central coordinator",
+   "A central coordinator directs each step"
+  ],
+  "correctIndex": 2,
+  "explanation": "Orchestration uses a central coordinator instead."
+ },
+ {
+  "band": "10-15",
+  "topic": "Microservices",
+  "difficulty": "HARD",
+  "text": "The transactional outbox pattern solves...",
+  "options": [
+   "N+1 queries",
+   "Schema migration",
+   "The dual-write problem between a database update and a message publish",
+   "Slow queries"
+  ],
+  "correctIndex": 2,
+  "explanation": "The event is stored in the same transaction and relayed later."
+ },
+ {
+  "band": "10-15",
+  "topic": "Microservices",
+  "difficulty": "HARD",
+  "text": "The bulkhead pattern isolates...",
+  "options": [
+   "Databases per region",
+   "Code modules",
+   "Log files",
+   "Resources such as thread pools or connections per dependency to contain failures"
+  ],
+  "correctIndex": 3,
+  "explanation": "One slow dependency cannot exhaust all resources."
+ },
+ {
+  "band": "10-15",
+  "topic": "Microservices",
+  "difficulty": "MEDIUM",
+  "text": "The strangler fig pattern is used for...",
+  "options": [
+   "Load testing",
+   "Incrementally migrating a monolith by routing features to new services",
+   "Securing APIs",
+   "Caching"
+  ],
+  "correctIndex": 1,
+  "explanation": "The legacy system is replaced piece by piece."
+ },
+ {
+  "band": "10-15",
+  "topic": "Microservices",
+  "difficulty": "HARD",
+  "text": "Retries with exponential backoff and jitter help avoid...",
+  "options": [
+   "Memory leaks",
+   "Thundering-herd retry storms",
+   "SQL injection",
+   "Schema drift"
+  ],
+  "correctIndex": 1,
+  "explanation": "Jitter de-synchronizes clients."
+ },
+ {
+  "band": "10-15",
+  "topic": "Microservices",
+  "difficulty": "HARD",
+  "text": "Why are idempotent consumers needed with most message brokers?",
+  "options": [
+   "Brokers typically deliver at least once, so duplicates occur",
+   "Brokers deliver at most once",
+   "Brokers guarantee global ordering",
+   "Brokers always deliver exactly once"
+  ],
+  "correctIndex": 0,
+  "explanation": "Redelivery after failures produces duplicates."
+ },
+ {
+  "band": "10-15",
+  "topic": "Microservices",
+  "difficulty": "MEDIUM",
+  "text": "Spring Cloud Config provides...",
+  "options": [
+   "Centralized, externalized configuration for services",
+   "A database",
+   "A service mesh",
+   "Continuous integration"
+  ],
+  "correctIndex": 0,
+  "explanation": "Configuration is served from a repository."
+ },
+ {
+  "band": "10-15",
+  "topic": "Microservices",
+  "difficulty": "HARD",
+  "text": "Consumer-driven contract testing (Pact, Spring Cloud Contract) verifies that...",
+  "options": [
+   "UI flows work",
+   "Performance targets are met",
+   "The provider's API meets its consumers' expectations",
+   "The database schema is valid"
+  ],
+  "correctIndex": 2,
+  "explanation": "Breaking changes are caught before deployment."
+ },
+ {
+  "band": "10-15",
+  "topic": "REST APIs",
+  "difficulty": "HARD",
+  "text": "ETag with If-None-Match enables...",
+  "options": [
+   "Conditional GETs that return 304 when the resource is unchanged",
+   "Compression",
+   "Versioning",
+   "Authentication"
+  ],
+  "correctIndex": 0,
+  "explanation": "It saves bandwidth and supports caching."
+ },
+ {
+  "band": "10-15",
+  "topic": "REST APIs",
+  "difficulty": "HARD",
+  "text": "What is the REST best practice for a long-running operation such as processing a bulk payment file?",
+  "options": [
+   "Use GET",
+   "Hold the connection until processing is done",
+   "Return 202 Accepted with a status resource to poll or a callback",
+   "Return 200 immediately with a fake result"
+  ],
+  "correctIndex": 2,
+  "explanation": "The client tracks progress asynchronously."
+ },
+ {
+  "band": "10-15",
+  "topic": "REST APIs",
+  "difficulty": "MEDIUM",
+  "text": "Which is true for PATCH?",
+  "options": [
+   "It applies partial modifications and is not necessarily idempotent",
+   "It is the same as PUT",
+   "It is always idempotent",
+   "It is only for deletes"
+  ],
+  "correctIndex": 0,
+  "explanation": "Idempotency depends on the patch semantics."
+ },
+ {
+  "band": "10-15",
+  "topic": "REST APIs",
+  "difficulty": "MEDIUM",
+  "text": "OpenAPI (Swagger) is used for...",
+  "options": [
+   "Describing and documenting the REST API contract",
+   "Database migration",
+   "Load balancing",
+   "Logging"
+  ],
+  "correctIndex": 0,
+  "explanation": "It enables docs, client generation and contract testing."
+ },
+ {
+  "band": "10-15",
+  "topic": "Messaging",
+  "difficulty": "HARD",
+  "text": "What triggers a Kafka consumer group rebalance?",
+  "options": [
+   "A garbage collection",
+   "A consumer joining or leaving, or exceeding the session timeout or max poll interval",
+   "Reading a topic",
+   "A producer restart"
+  ],
+  "correctIndex": 1,
+  "explanation": "Long processing between polls is a common cause."
+ },
+ {
+  "band": "10-15",
+  "topic": "Messaging",
+  "difficulty": "HARD",
+  "text": "The Kafka idempotent producer (enable.idempotence=true) prevents...",
+  "options": [
+   "Data loss on disk failure",
+   "Duplicates caused by producer retries within a partition",
+   "Rebalances",
+   "Consumer-side duplicates"
+  ],
+  "correctIndex": 1,
+  "explanation": "Sequence numbers let the broker drop retried duplicates."
+ },
+ {
+  "band": "10-15",
+  "topic": "Messaging",
+  "difficulty": "HARD",
+  "text": "How do you guarantee ordering of all events for a given account in Kafka?",
+  "options": [
+   "Increase the number of partitions",
+   "Use one consumer group per message",
+   "Use the account ID as the message key",
+   "Use a random partitioner"
+  ],
+  "correctIndex": 2,
+  "explanation": "Same key means same partition, which means ordered."
+ },
+ {
+  "band": "10-15",
+  "topic": "Messaging",
+  "difficulty": "MEDIUM",
+  "text": "A dead-letter topic or queue is used for...",
+  "options": [
+   "Compacted logs",
+   "Schemas",
+   "High-priority messages",
+   "Messages that repeatedly fail processing"
+  ],
+  "correctIndex": 3,
+  "explanation": "It keeps the main flow moving and preserves failures for analysis."
+ },
+ {
+  "band": "10-15",
+  "topic": "Messaging",
+  "difficulty": "HARD",
+  "text": "What does acks=all mean for a Kafka producer?",
+  "options": [
+   "Consumers acknowledge",
+   "The leader waits for all in-sync replicas to acknowledge",
+   "No acknowledgement is required",
+   "Only the leader acknowledges"
+  ],
+  "correctIndex": 1,
+  "explanation": "Combine with min.insync.replicas for durability."
+ },
+ {
+  "band": "10-15",
+  "topic": "Security",
+  "difficulty": "HARD",
+  "text": "Which OAuth2 flow is recommended for SPAs and mobile apps?",
+  "options": [
+   "Client Credentials",
+   "Implicit",
+   "Resource Owner Password",
+   "Authorization Code with PKCE"
+  ],
+  "correctIndex": 3,
+  "explanation": "PKCE protects the code exchange for public clients."
+ },
+ {
+  "band": "10-15",
+  "topic": "Security",
+  "difficulty": "HARD",
+  "text": "Service-to-service authentication without a user typically uses...",
+  "options": [
+   "Basic auth with user passwords",
+   "Browser cookies",
+   "Client credentials grant or mutual TLS",
+   "Implicit grant"
+  ],
+  "correctIndex": 2,
+  "explanation": "Machine identities authenticate themselves."
+ },
+ {
+  "band": "10-15",
+  "topic": "Security",
+  "difficulty": "MEDIUM",
+  "text": "CSRF protection is most relevant when...",
+  "options": [
+   "Only bearer tokens in headers are used",
+   "Calls are server-to-server",
+   "Authentication relies on cookies sent automatically by the browser",
+   "The client is a CLI"
+  ],
+  "correctIndex": 2,
+  "explanation": "CSRF exploits ambient browser credentials."
+ },
+ {
+  "band": "10-15",
+  "topic": "Security",
+  "difficulty": "HARD",
+  "text": "How should a resource server validate JWT access tokens?",
+  "options": [
+   "Verify signatures with the issuer's JWKS public keys and check claims",
+   "Query the user database on every request only",
+   "Base64-decode the payload only",
+   "No validation is needed"
+  ],
+  "correctIndex": 0,
+  "explanation": "Also validate exp, iss and aud."
+ },
+ {
+  "band": "10-15",
+  "topic": "Design Patterns",
+  "difficulty": "MEDIUM",
+  "text": "Which pattern does Spring's JdbcTemplate primarily exemplify?",
+  "options": [
+   "Adapter",
+   "Singleton",
+   "Observer",
+   "Template Method"
+  ],
+  "correctIndex": 3,
+  "explanation": "It fixes the workflow and delegates the variable steps via callbacks."
+ },
+ {
+  "band": "10-15",
+  "topic": "Design Patterns",
+  "difficulty": "MEDIUM",
+  "text": "The Strategy pattern is best for...",
+  "options": [
+   "Guaranteeing a single instance",
+   "Broadcasting events",
+   "Selecting interchangeable algorithms at runtime",
+   "Creating families of objects"
+  ],
+  "correctIndex": 2,
+  "explanation": "For example, choosing a fee calculation per payment type."
+ },
+ {
+  "band": "10-15",
+  "topic": "Design Patterns",
+  "difficulty": "HARD",
+  "text": "Why is double-checked locking for a singleton broken without volatile?",
+  "options": [
+   "Instruction reordering can publish a partially constructed object",
+   "synchronized does not work in singletons",
+   "The GC collects the instance",
+   "Static fields are not allowed"
+  ],
+  "correctIndex": 0,
+  "explanation": "volatile prevents the unsafe publication."
+ },
+ {
+  "band": "10-15",
+  "topic": "Design Patterns",
+  "difficulty": "MEDIUM",
+  "text": "The Decorator pattern adds behaviour...",
+  "options": [
+   "By subclassing only",
+   "Through reflection only",
+   "Dynamically, by wrapping objects that share the same interface",
+   "Through global variables"
+  ],
+  "correctIndex": 2,
+  "explanation": "java.io streams are a classic example."
+ },
+ {
+  "band": "10-15",
+  "topic": "System Design",
+  "difficulty": "HARD",
+  "text": "During a network partition, the CAP theorem says a distributed system must choose between...",
+  "options": [
+   "CPU and memory",
+   "Cache and persistence",
+   "Cost and performance",
+   "Consistency and availability"
+  ],
+  "correctIndex": 3,
+  "explanation": "Partition tolerance is not optional in practice."
+ },
+ {
+  "band": "10-15",
+  "topic": "System Design",
+  "difficulty": "HARD",
+  "text": "The cache-aside pattern means...",
+  "options": [
+   "The cache writes to the database automatically",
+   "The application loads data into the cache on a miss and invalidates it after writing to the database",
+   "The database pushes updates to the cache",
+   "Cache entries never expire"
+  ],
+  "correctIndex": 1,
+  "explanation": "Also known as lazy loading."
+ },
+ {
+  "band": "10-15",
+  "topic": "System Design",
+  "difficulty": "HARD",
+  "text": "For account balance reads that require strict consistency, which approach is risky?",
+  "options": [
+   "Serving balances from asynchronously replicated read replicas without accounting for lag",
+   "Using synchronous replication",
+   "Using versioned reads",
+   "Reading from the primary"
+  ],
+  "correctIndex": 0,
+  "explanation": "Replica lag can show stale balances."
+ },
+ {
+  "band": "10-15",
+  "topic": "System Design",
+  "difficulty": "MEDIUM",
+  "text": "Horizontal scaling means...",
+  "options": [
+   "Adding more instances",
+   "Using a faster network card",
+   "Adding more CPU to one server",
+   "Using a bigger disk"
+  ],
+  "correctIndex": 0,
+  "explanation": "Vertical scaling adds resources to a single node."
+ },
+ {
+  "band": "10-15",
+  "topic": "System Design",
+  "difficulty": "HARD",
+  "text": "Consistent hashing helps by...",
+  "options": [
+   "Ordering messages",
+   "Minimizing key remapping when nodes join or leave",
+   "Encrypting keys",
+   "Compressing data"
+  ],
+  "correctIndex": 1,
+  "explanation": "Only about 1/n of the keys move."
+ },
+ {
+  "band": "10-15",
+  "topic": "SQL & Databases",
+  "difficulty": "HARD",
+  "text": "Per the SQL standard, which isolation level prevents non-repeatable reads but may allow phantom reads?",
+  "options": [
+   "REPEATABLE READ",
+   "READ UNCOMMITTED",
+   "SERIALIZABLE",
+   "READ COMMITTED"
+  ],
+  "correctIndex": 0,
+  "explanation": "Phantoms are only prevented by SERIALIZABLE in the standard."
+ },
+ {
+  "band": "10-15",
+  "topic": "SQL & Databases",
+  "difficulty": "HARD",
+  "text": "A composite index on (account_id, created_at) best serves...",
+  "options": [
+   "WHERE account_id = ? ORDER BY created_at",
+   "LIKE '%x%' searches",
+   "WHERE created_at = ? only",
+   "Full table scans"
+  ],
+  "correctIndex": 0,
+  "explanation": "Leftmost-prefix rule plus index-ordered scan."
+ },
+ {
+  "band": "10-15",
+  "topic": "SQL & Databases",
+  "difficulty": "MEDIUM",
+  "text": "EXPLAIN (an execution plan) is used to...",
+  "options": [
+   "Back up data",
+   "Grant privileges",
+   "Analyze how the database executes a query",
+   "Create indexes automatically"
+  ],
+  "correctIndex": 2,
+  "explanation": "It reveals scans, joins and index use."
+ },
+ {
+  "band": "10-15",
+  "topic": "SQL & Databases",
+  "difficulty": "HARD",
+  "text": "Why does keyset (seek) pagination outperform OFFSET on large tables?",
+  "options": [
+   "It caches rows",
+   "It avoids scanning and discarding the skipped rows",
+   "It uses no index",
+   "It is the only standard SQL option"
+  ],
+  "correctIndex": 1,
+  "explanation": "WHERE id > last_seen uses the index directly."
+ },
+ {
+  "band": "15+",
+  "topic": "System Design",
+  "difficulty": "HARD",
+  "text": "In a payment system, what is the practical way to achieve an exactly-once effect?",
+  "options": [
+   "At-least-once delivery with idempotent processing and deduplication keys",
+   "Two-phase commit across all services and third parties",
+   "Relying on the network for exactly-once delivery",
+   "Disabling retries"
+  ],
+  "correctIndex": 0,
+  "explanation": "Effect-once is achieved at the application level."
+ },
+ {
+  "band": "15+",
+  "topic": "System Design",
+  "difficulty": "HARD",
+  "text": "A globally distributed ledger needs strong consistency. Which approach fits?",
+  "options": [
+   "Gossip-based eventual consistency only",
+   "Client-side caching",
+   "Asynchronous multi-master with last-write-wins",
+   "Consensus-based replication (Raft/Paxos, Spanner-like)"
+  ],
+  "correctIndex": 3,
+  "explanation": "Consensus provides linearizable writes across sites."
+ },
+ {
+  "band": "15+",
+  "topic": "System Design",
+  "difficulty": "HARD",
+  "text": "Event sourcing stores...",
+  "options": [
+   "Snapshots only",
+   "State changes as an immutable sequence of events from which state is derived",
+   "Only the latest state",
+   "Debug logs"
+  ],
+  "correctIndex": 1,
+  "explanation": "Current state is a fold over the events."
+ },
+ {
+  "band": "15+",
+  "topic": "System Design",
+  "difficulty": "HARD",
+  "text": "CQRS is most justified when...",
+  "options": [
+   "You want fewer components",
+   "The application is simple CRUD",
+   "Read and write workloads or models differ significantly in shape or scale",
+   "The team is small and the domain is simple"
+  ],
+  "correctIndex": 2,
+  "explanation": "Otherwise the added complexity is rarely worth it."
+ },
+ {
+  "band": "15+",
+  "topic": "System Design",
+  "difficulty": "HARD",
+  "text": "What is the primary cost of combining CQRS with event sourcing?",
+  "options": [
+   "Inability to scale",
+   "More complexity, eventually consistent read models and event schema evolution",
+   "Always-slower writes",
+   "Losing the audit trail"
+  ],
+  "correctIndex": 1,
+  "explanation": "These costs must be weighed against the benefits."
+ },
+ {
+  "band": "15+",
+  "topic": "System Design",
+  "difficulty": "HARD",
+  "text": "To achieve an RPO near zero across regions for core banking data you need...",
+  "options": [
+   "Synchronous replication or quorum writes across sites, accepting the added latency",
+   "Larger instances",
+   "Nightly backups",
+   "Asynchronous replication only"
+  ],
+  "correctIndex": 0,
+  "explanation": "Asynchronous replication can lose in-flight writes."
+ },
+ {
+  "band": "15+",
+  "topic": "System Design",
+  "difficulty": "MEDIUM",
+  "text": "RTO measures...",
+  "options": [
+   "Throughput",
+   "The maximum acceptable time to restore service after an outage",
+   "The maximum acceptable data loss window",
+   "The error budget"
+  ],
+  "correctIndex": 1,
+  "explanation": "RPO measures data loss; RTO measures downtime."
+ },
+ {
+  "band": "15+",
+  "topic": "System Design",
+  "difficulty": "HARD",
+  "text": "Backpressure in streaming systems means...",
+  "options": [
+   "Consumers signal producers to slow down to avoid overload",
+   "Dropping all messages",
+   "Retrying forever",
+   "Producers pushing faster"
+  ],
+  "correctIndex": 0,
+  "explanation": "Reactive Streams formalizes it with request(n)."
+ },
+ {
+  "band": "15+",
+  "topic": "System Design",
+  "difficulty": "HARD",
+  "text": "A hot partition in a sharded datastore is best mitigated by...",
+  "options": [
+   "Disabling replication",
+   "Adding indexes",
+   "Better key design, such as salting or composite keys, to spread load",
+   "A bigger single node only"
+  ],
+  "correctIndex": 2,
+  "explanation": "Skewed keys concentrate traffic on one shard."
+ },
+ {
+  "band": "15+",
+  "topic": "System Design",
+  "difficulty": "HARD",
+  "text": "A 99.9% monthly availability SLO allows roughly how much downtime in a 30-day month?",
+  "options": [
+   "About 43 minutes",
+   "About 7.2 hours",
+   "About 1 minute",
+   "About 4.3 minutes"
+  ],
+  "correctIndex": 0,
+  "explanation": "43,200 minutes x 0.1% = 43.2 minutes."
+ },
+ {
+  "band": "15+",
+  "topic": "System Design",
+  "difficulty": "HARD",
+  "text": "Noisy-neighbour problems in multi-tenant SaaS are mitigated by...",
+  "options": [
+   "A bigger database",
+   "One shared thread pool",
+   "Per-tenant quotas, rate limits and resource isolation",
+   "Removing monitoring"
+  ],
+  "correctIndex": 2,
+  "explanation": "Fairness must be enforced per tenant."
+ },
+ {
+  "band": "15+",
+  "topic": "System Design",
+  "difficulty": "HARD",
+  "text": "Which is a sign that a synchronous call chain should become asynchronous?",
+  "options": [
+   "Reading configuration",
+   "Health checks",
+   "Long fan-out chains where latency and failure probability compound across hops",
+   "A single fast lookup"
+  ],
+  "correctIndex": 2,
+  "explanation": "Availability multiplies across synchronous hops."
+ },
+ {
+  "band": "15+",
+  "topic": "Microservices",
+  "difficulty": "MEDIUM",
+  "text": "In Domain-Driven Design, a bounded context defines...",
+  "options": [
+   "A microservice's port",
+   "A database schema",
+   "A boundary within which a domain model and its ubiquitous language are consistent",
+   "A network zone"
+  ],
+  "correctIndex": 2,
+  "explanation": "Each context owns its model."
+ },
+ {
+  "band": "15+",
+  "topic": "Microservices",
+  "difficulty": "HARD",
+  "text": "An anti-corruption layer is used to...",
+  "options": [
+   "Translate between your domain model and a legacy or external model",
+   "Prevent SQL injection",
+   "Encrypt data",
+   "Balance load"
+  ],
+  "correctIndex": 0,
+  "explanation": "It keeps external concepts from leaking into your domain."
+ },
+ {
+  "band": "15+",
+  "topic": "Microservices",
+  "difficulty": "HARD",
+  "text": "Service mesh sidecars (Istio, Linkerd) typically provide...",
+  "options": [
+   "Business logic",
+   "UI rendering",
+   "mTLS, retries, traffic shifting and telemetry outside application code",
+   "Database connection pooling"
+  ],
+  "correctIndex": 2,
+  "explanation": "Networking concerns move into the platform."
+ },
+ {
+  "band": "15+",
+  "topic": "Microservices",
+  "difficulty": "MEDIUM",
+  "text": "In a canary deployment...",
+  "options": [
+   "A small share of traffic goes to the new version and is increased gradually",
+   "All traffic switches at once",
+   "Both versions run forever",
+   "The database is rolled back"
+  ],
+  "correctIndex": 0,
+  "explanation": "Blue-green switches all traffic at once."
+ },
+ {
+  "band": "15+",
+  "topic": "Microservices",
+  "difficulty": "HARD",
+  "text": "What is the safest way to change a schema shared across service versions without downtime?",
+  "options": [
+   "Shared database locks",
+   "Expand-and-contract (parallel change) migrations",
+   "Dropping columns first",
+   "A big-bang migration"
+  ],
+  "correctIndex": 1,
+  "explanation": "Old and new versions keep working during the transition."
+ },
+ {
+  "band": "15+",
+  "topic": "Microservices",
+  "difficulty": "HARD",
+  "text": "A 'distributed monolith' is characterized by...",
+  "options": [
+   "Independent deployments",
+   "Services that must be deployed together because of tight coupling",
+   "A single repository",
+   "Event-driven design"
+  ],
+  "correctIndex": 1,
+  "explanation": "It combines the costs of both styles."
+ },
+ {
+  "band": "15+",
+  "topic": "Microservices",
+  "difficulty": "MEDIUM",
+  "text": "Conway's law implies that...",
+  "options": [
+   "System architecture mirrors the organization's communication structure",
+   "Latency doubles per hop",
+   "Microservices are always better",
+   "More servers mean fewer bugs"
+  ],
+  "correctIndex": 0,
+  "explanation": "Team topology shapes system boundaries."
+ },
+ {
+  "band": "15+",
+  "topic": "Microservices",
+  "difficulty": "HARD",
+  "text": "Platform teams and 'golden paths' aim to...",
+  "options": [
+   "Centralize all coding",
+   "Replace SRE",
+   "Reduce cognitive load through paved, self-service tooling",
+   "Forbid technology choices"
+  ],
+  "correctIndex": 2,
+  "explanation": "Teams move faster on supported defaults."
+ },
+ {
+  "band": "15+",
+  "topic": "Microservices",
+  "difficulty": "HARD",
+  "text": "What is a reasonable timeout strategy for inter-service calls with strict latency budgets?",
+  "options": [
+   "Use infinite timeouts",
+   "Use the same large timeout everywhere",
+   "Use no timeouts but retry",
+   "Propagate deadlines along the call chain, with per-hop timeouts smaller than the caller's"
+  ],
+  "correctIndex": 3,
+  "explanation": "Callers should not wait longer than their own budget."
+ },
+ {
+  "band": "15+",
+  "topic": "Microservices",
+  "difficulty": "HARD",
+  "text": "When would you choose gRPC over REST for internal service calls?",
+  "options": [
+   "For simple CDN caching",
+   "For public browser APIs without a proxy",
+   "For low latency, strongly typed contracts and streaming between services",
+   "For human-readable payloads"
+  ],
+  "correctIndex": 2,
+  "explanation": "Protobuf over HTTP/2 is compact and typed."
+ },
+ {
+  "band": "15+",
+  "topic": "Messaging",
+  "difficulty": "HARD",
+  "text": "Kafka exactly-once semantics in stream processing rely on...",
+  "options": [
+   "A single partition only",
+   "Idempotent producers, transactions and read_committed consumers",
+   "Auto-commit",
+   "acks=0"
+  ],
+  "correctIndex": 1,
+  "explanation": "Offsets and outputs are committed atomically."
+ },
+ {
+  "band": "15+",
+  "topic": "Messaging",
+  "difficulty": "HARD",
+  "text": "Kafka log compaction retains...",
+  "options": [
+   "Nothing",
+   "Only the first message",
+   "At least the latest value for each key",
+   "All messages forever"
+  ],
+  "correctIndex": 2,
+  "explanation": "Useful for changelog and state topics."
+ },
+ {
+  "band": "15+",
+  "topic": "Messaging",
+  "difficulty": "HARD",
+  "text": "Schema evolution in event-driven systems is best governed by...",
+  "options": [
+   "Frequent breaking changes",
+   "Changing producers first without checks",
+   "A schema registry with compatibility rules (backward/forward)",
+   "Free-form JSON without versioning"
+  ],
+  "correctIndex": 2,
+  "explanation": "Compatibility checks run before a schema is registered."
+ },
+ {
+  "band": "15+",
+  "topic": "Messaging",
+  "difficulty": "HARD",
+  "text": "What happens if you increase the partitions of an existing keyed Kafka topic?",
+  "options": [
+   "Data is deleted",
+   "Per-key ordering can break because keys map to different partitions",
+   "Nothing",
+   "Throughput always drops"
+  ],
+  "correctIndex": 1,
+  "explanation": "The hash-mod mapping changes."
+ },
+ {
+  "band": "15+",
+  "topic": "Messaging",
+  "difficulty": "HARD",
+  "text": "Kafka fits better than a traditional queue (RabbitMQ, MQ) when you need...",
+  "options": [
+   "Small-scale task distribution",
+   "Replayable, high-throughput event streams with multiple independent consumers",
+   "Request/reply only",
+   "Per-message complex routing with priorities"
+  ],
+  "correctIndex": 1,
+  "explanation": "The log model supports replay and fan-out."
+ },
+ {
+  "band": "15+",
+  "topic": "Messaging",
+  "difficulty": "HARD",
+  "text": "What is best practice for handling a poison-pill message?",
+  "options": [
+   "Bounded retries, then route it to a DLQ with alerting",
+   "Retry forever",
+   "Drop it silently",
+   "Restart the consumer"
+  ],
+  "correctIndex": 0,
+  "explanation": "Otherwise the partition is blocked."
+ },
+ {
+  "band": "15+",
+  "topic": "Security",
+  "difficulty": "MEDIUM",
+  "text": "The core principle of zero-trust architecture is...",
+  "options": [
+   "Never trust, always verify: authenticate and authorize every request regardless of network location",
+   "A perimeter firewall is sufficient",
+   "Trust the internal network",
+   "VPN access is sufficient"
+  ],
+  "correctIndex": 0,
+  "explanation": "Network location grants no implicit trust."
+ },
+ {
+  "band": "15+",
+  "topic": "Security",
+  "difficulty": "HARD",
+  "text": "For PCI-DSS scoped card data, a common architectural strategy is...",
+  "options": [
+   "Tokenization to minimize the systems that store the PAN",
+   "Storing encrypted CVVs",
+   "Logging PANs for audit",
+   "Sharing one database"
+  ],
+  "correctIndex": 0,
+  "explanation": "Fewer systems in scope means less risk and audit effort."
+ },
+ {
+  "band": "15+",
+  "topic": "Security",
+  "difficulty": "HARD",
+  "text": "Secrets rotation at scale is best handled by...",
+  "options": [
+   "Hard-coded keys",
+   "A vault or secret manager issuing dynamic, short-lived credentials",
+   "Environment variables committed to git",
+   "Manual quarterly updates"
+  ],
+  "correctIndex": 1,
+  "explanation": "Short-lived credentials limit the blast radius."
+ },
+ {
+  "band": "15+",
+  "topic": "Security",
+  "difficulty": "HARD",
+  "text": "Which defends against replay attacks on signed API requests?",
+  "options": [
+   "Longer tokens",
+   "gzip",
+   "Timestamps and nonces with short validity windows",
+   "HTTP/2"
+  ],
+  "correctIndex": 2,
+  "explanation": "A captured request cannot be reused later."
+ },
+ {
+  "band": "15+",
+  "topic": "Security",
+  "difficulty": "HARD",
+  "text": "The principle of least privilege applied to microservices means...",
+  "options": [
+   "Each service gets only the permissions and database grants it needs",
+   "Developers get production access",
+   "All services share admin credentials",
+   "No internal authentication"
+  ],
+  "correctIndex": 0,
+  "explanation": "It limits lateral movement after a compromise."
+ },
+ {
+  "band": "15+",
+  "topic": "JVM Internals",
+  "difficulty": "HARD",
+  "text": "A JVM service shows p99 latency spikes every few minutes that correlate with long full GCs. What is the first step?",
+  "options": [
+   "Disable GC",
+   "Only add more pods",
+   "Analyze GC logs and allocation rate, then tune the heap/GC or fix allocation hotspots",
+   "Increase the thread count"
+  ],
+  "correctIndex": 2,
+  "explanation": "Diagnose before scaling out."
+ },
+ {
+  "band": "15+",
+  "topic": "JVM Internals",
+  "difficulty": "MEDIUM",
+  "text": "Java Flight Recorder (JFR) is used for...",
+  "options": [
+   "Low-overhead profiling and event recording in production",
+   "Compiling code",
+   "Deployment",
+   "Unit testing"
+  ],
+  "correctIndex": 0,
+  "explanation": "Analyze recordings in JDK Mission Control."
+ },
+ {
+  "band": "15+",
+  "topic": "JVM Internals",
+  "difficulty": "HARD",
+  "text": "In containers, -XX:MaxRAMPercentage controls...",
+  "options": [
+   "CPU count",
+   "Metaspace size",
+   "Maximum heap as a percentage of the container memory limit",
+   "Thread stack size"
+  ],
+  "correctIndex": 2,
+  "explanation": "The JVM is container-aware since Java 10."
+ },
+ {
+  "band": "15+",
+  "topic": "JVM Internals",
+  "difficulty": "HARD",
+  "text": "AppCDS and GraalVM native image primarily improve...",
+  "options": [
+   "Security",
+   "GC throughput",
+   "Startup time and memory footprint",
+   "Logging"
+  ],
+  "correctIndex": 2,
+  "explanation": "Valuable for scale-to-zero and serverless."
+ },
+ {
+  "band": "15+",
+  "topic": "JVM Internals",
+  "difficulty": "HARD",
+  "text": "Little's Law (L = lambda x W) helps you to...",
+  "options": [
+   "Compute GC pauses",
+   "Size concurrency, such as thread or connection pools, from throughput and latency",
+   "Estimate disk usage",
+   "Encrypt traffic"
+  ],
+  "correctIndex": 1,
+  "explanation": "For example, 200 rps x 0.05 s = 10 concurrent requests."
+ },
+ {
+  "band": "15+",
+  "topic": "Concurrency",
+  "difficulty": "HARD",
+  "text": "Structured concurrency (preview in Java 21) aims to...",
+  "options": [
+   "Treat related concurrent tasks as a unit with coordinated cancellation and error handling",
+   "Remove threads",
+   "Replace garbage collection",
+   "Run code on GPUs"
+  ],
+  "correctIndex": 0,
+  "explanation": "Child tasks cannot outlive their scope."
+ },
+ {
+  "band": "15+",
+  "topic": "Concurrency",
+  "difficulty": "HARD",
+  "text": "Lock-free algorithms typically rely on...",
+  "options": [
+   "volatile only",
+   "Compare-and-swap (CAS) atomic primitives",
+   "synchronized blocks",
+   "Thread.sleep"
+  ],
+  "correctIndex": 1,
+  "explanation": "Retry loops around CAS avoid blocking."
+ },
+ {
+  "band": "15+",
+  "topic": "Concurrency",
+  "difficulty": "HARD",
+  "text": "False sharing degrades performance when...",
+  "options": [
+   "Variables are final",
+   "Threads only read",
+   "ThreadLocal is used",
+   "Threads write independent variables that share a CPU cache line"
+  ],
+  "correctIndex": 3,
+  "explanation": "Padding (for example @Contended) mitigates it."
+ },
+ {
+  "band": "15+",
+  "topic": "Concurrency",
+  "difficulty": "HARD",
+  "text": "A distributed lock built on Redis or ZooKeeper must handle...",
+  "options": [
+   "Lease expiry and fencing tokens so stale lock holders cannot corrupt data",
+   "Nothing special",
+   "Local caches",
+   "JVM-level locks"
+  ],
+  "correctIndex": 0,
+  "explanation": "Pauses can outlive the lease."
+ },
+ {
+  "band": "15+",
+  "topic": "Concurrency",
+  "difficulty": "HARD",
+  "text": "How do you prevent double-spend on concurrent debits of the same account?",
+  "options": [
+   "Check the balance and update it in separate transactions",
+   "Retry blindly",
+   "Cache balances in memory per pod",
+   "Serialize per account (row lock, version check or per-key partitioning) and validate the balance in the same transaction"
+  ],
+  "correctIndex": 3,
+  "explanation": "Check-then-act across transactions is a race."
+ },
+ {
+  "band": "15+",
+  "topic": "SQL & Databases",
+  "difficulty": "HARD",
+  "text": "What is the main challenge of sharding a transactions table by customer_id?",
+  "options": [
+   "Backups become impossible",
+   "It does not scale",
+   "Indexing",
+   "Cross-shard queries and transactions, such as reporting or transfers between customers on different shards"
+  ],
+  "correctIndex": 3,
+  "explanation": "Shard keys should match the dominant access pattern."
+ },
+ {
+  "band": "15+",
+  "topic": "SQL & Databases",
+  "difficulty": "MEDIUM",
+  "text": "Change Data Capture (for example Debezium) is used to...",
+  "options": [
+   "Cache queries",
+   "Stream database changes from the transaction log as events to other systems",
+   "Migrate schemas",
+   "Back up the database"
+  ],
+  "correctIndex": 1,
+  "explanation": "It avoids dual writes from the application."
+ },
+ {
+  "band": "15+",
+  "topic": "SQL & Databases",
+  "difficulty": "HARD",
+  "text": "Which is appropriate for an audit trail that must be tamper-evident?",
+  "options": [
+   "Append-only storage with hash chaining or WORM retention",
+   "Local log files",
+   "Periodically deleting old entries",
+   "Updatable rows"
+  ],
+  "correctIndex": 0,
+  "explanation": "Any modification breaks the chain."
+ },
+ {
+  "band": "15+",
+  "topic": "SQL & Databases",
+  "difficulty": "HARD",
+  "text": "Polyglot persistence is justified when...",
+  "options": [
+   "Different data access patterns genuinely benefit from different stores",
+   "Always",
+   "You want to avoid backups",
+   "The team wants to try new technology"
+  ],
+  "correctIndex": 0,
+  "explanation": "Every store adds operational cost."
+ },
+ {
+  "band": "15+",
+  "topic": "SQL & Databases",
+  "difficulty": "HARD",
+  "text": "How can read-your-writes consistency be achieved in a replicated system?",
+  "options": [
+   "Route a user's reads to the primary or track replication position with session tokens",
+   "Read from any replica",
+   "Increase the cache TTL",
+   "Disable writes"
+  ],
+  "correctIndex": 0,
+  "explanation": "The user must never see data older than their own write."
+ },
+ {
+  "band": "15+",
+  "topic": "Design Patterns",
+  "difficulty": "HARD",
+  "text": "Hexagonal (ports and adapters) architecture primarily aims to...",
+  "options": [
+   "Speed up the database",
+   "Use six services",
+   "Isolate domain logic from infrastructure through ports with pluggable adapters",
+   "Maximize the number of layers"
+  ],
+  "correctIndex": 2,
+  "explanation": "The domain has no framework dependencies."
+ },
+ {
+  "band": "15+",
+  "topic": "Design Patterns",
+  "difficulty": "MEDIUM",
+  "text": "Architecture Decision Records (ADRs) are used to...",
+  "options": [
+   "Store passwords",
+   "Plan sprints",
+   "Document significant decisions with their context and consequences",
+   "Track bugs"
+  ],
+  "correctIndex": 2,
+  "explanation": "Future readers learn why, not just what."
+ },
+ {
+  "band": "15+",
+  "topic": "Design Patterns",
+  "difficulty": "HARD",
+  "text": "In a build-vs-buy decision for a fraud-detection component, the most important factors are...",
+  "options": [
+   "GitHub stars",
+   "License colour",
+   "Developer preference",
+   "Total cost of ownership and strategic differentiation versus time-to-market and risk"
+  ],
+  "correctIndex": 3,
+  "explanation": "Build what differentiates; buy commodity."
+ },
+ {
+  "band": "15+",
+  "topic": "Design Patterns",
+  "difficulty": "HARD",
+  "text": "How should technical debt be managed?",
+  "options": [
+   "Rewrite everything yearly",
+   "Ban refactoring",
+   "Make it visible, quantify its impact and prioritize paydown alongside features",
+   "Ignore it until an outage"
+  ],
+  "correctIndex": 2,
+  "explanation": "Debt is a business decision, not only an engineering one."
+ },
+ {
+  "band": "15+",
+  "topic": "REST APIs",
+  "difficulty": "HARD",
+  "text": "Which API change is backward compatible?",
+  "options": [
+   "Changing a field's meaning",
+   "Renaming a field",
+   "Adding an optional response field",
+   "Removing a field"
+  ],
+  "correctIndex": 2,
+  "explanation": "Tolerant readers ignore unknown fields."
+ },
+ {
+  "band": "15+",
+  "topic": "REST APIs",
+  "difficulty": "MEDIUM",
+  "text": "Which rate-limiting algorithm allows bursts while enforcing an average rate?",
+  "options": [
+   "Random drop",
+   "No limiting",
+   "Token bucket",
+   "Fixed window only"
+  ],
+  "correctIndex": 2,
+  "explanation": "Tokens accumulate up to the bucket capacity."
+ },
+ {
+  "band": "15+",
+  "topic": "REST APIs",
+  "difficulty": "HARD",
+  "text": "For partner-facing banking APIs, request integrity and non-repudiation typically use...",
+  "options": [
+   "An IP allow-list only",
+   "Mutual TLS plus message signing (for example JWS) with timestamps",
+   "An API key in the query string",
+   "Basic auth"
+  ],
+  "correctIndex": 1,
+  "explanation": "The signature binds the payload to the sender."
+ }
+]

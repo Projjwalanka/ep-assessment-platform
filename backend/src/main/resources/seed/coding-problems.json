@@ -1,0 +1,470 @@
+[
+ {
+  "title": "Reverse the words in a sentence",
+  "band": "0-5",
+  "difficulty": "EASY",
+  "topic": "Core Java",
+  "suggestedMinutes": 15,
+  "description": "Implement `reverseWords(String s)` in class `Solution`.\n\nReturn the words of `s` in reverse order, separated by a single space. Leading, trailing and repeated spaces must be removed.\n\nExamples\n- \"payment received today\" -> \"today received payment\"\n- \"  hello   world \" -> \"world hello\"\n- \"   \" -> \"\" (empty string)",
+  "starterCode": "public class Solution {\n\n    public String reverseWords(String s) {\n        // TODO: implement\n        return \"\";\n    }\n}\n",
+  "referenceSolution": "public class Solution {\n    public String reverseWords(String s) {\n        if (s == null || s.isBlank()) return \"\";\n        String[] parts = s.trim().split(\"\\\\s+\");\n        StringBuilder sb = new StringBuilder();\n        for (int i = parts.length - 1; i >= 0; i--) {\n            sb.append(parts[i]);\n            if (i > 0) sb.append(' ');\n        }\n        return sb.toString();\n    }\n}\n",
+  "testCases": [
+   {
+    "name": "Simple sentence",
+    "call": "new Solution().reverseWords(\"payment received today\")",
+    "expected": "\"today received payment\"",
+    "hidden": false
+   },
+   {
+    "name": "Extra spaces",
+    "call": "new Solution().reverseWords(\"  hello   world \")",
+    "expected": "\"world hello\"",
+    "hidden": false
+   },
+   {
+    "name": "Single word",
+    "call": "new Solution().reverseWords(\"ledger\")",
+    "expected": "\"ledger\"",
+    "hidden": false
+   },
+   {
+    "name": "Empty string",
+    "call": "new Solution().reverseWords(\"\")",
+    "expected": "\"\"",
+    "hidden": true
+   },
+   {
+    "name": "Only spaces",
+    "call": "new Solution().reverseWords(\"    \")",
+    "expected": "\"\"",
+    "hidden": true
+   }
+  ]
+ },
+ {
+  "title": "Balanced brackets",
+  "band": "0-5",
+  "difficulty": "EASY",
+  "topic": "Collections",
+  "suggestedMinutes": 15,
+  "description": "Implement `isBalanced(String s)` in class `Solution`.\n\nReturn `true` if every bracket `()`, `[]`, `{}` in `s` is closed in the correct order. Other characters are ignored.\n\nExamples\n- \"{[()]}\" -> true\n- \"([)]\" -> false\n- \"amount(1)[2]\" -> true",
+  "starterCode": "import java.util.*;\n\npublic class Solution {\n\n    public boolean isBalanced(String s) {\n        // TODO: implement\n        return false;\n    }\n}\n",
+  "referenceSolution": "import java.util.*;\n\npublic class Solution {\n    public boolean isBalanced(String s) {\n        Deque<Character> st = new ArrayDeque<>();\n        for (char c : s.toCharArray()) {\n            if (c == '(' || c == '[' || c == '{') st.push(c);\n            else if (c == ')' || c == ']' || c == '}') {\n                if (st.isEmpty()) return false;\n                char o = st.pop();\n                if ((c == ')' && o != '(') || (c == ']' && o != '[') || (c == '}' && o != '{')) return false;\n            }\n        }\n        return st.isEmpty();\n    }\n}\n",
+  "testCases": [
+   {
+    "name": "Nested",
+    "call": "new Solution().isBalanced(\"{[()]}\")",
+    "expected": "true",
+    "hidden": false
+   },
+   {
+    "name": "Crossed",
+    "call": "new Solution().isBalanced(\"([)]\")",
+    "expected": "false",
+    "hidden": false
+   },
+   {
+    "name": "With text",
+    "call": "new Solution().isBalanced(\"amount(1)[2]\")",
+    "expected": "true",
+    "hidden": false
+   },
+   {
+    "name": "Unclosed",
+    "call": "new Solution().isBalanced(\"((\")",
+    "expected": "false",
+    "hidden": true
+   },
+   {
+    "name": "Closing first",
+    "call": "new Solution().isBalanced(\")(\")",
+    "expected": "false",
+    "hidden": true
+   },
+   {
+    "name": "Empty",
+    "call": "new Solution().isBalanced(\"\")",
+    "expected": "true",
+    "hidden": true
+   }
+  ]
+ },
+ {
+  "title": "Two sum",
+  "band": "0-5",
+  "difficulty": "MEDIUM",
+  "topic": "Collections",
+  "suggestedMinutes": 20,
+  "description": "Implement `twoSum(int[] nums, int target)` in class `Solution`.\n\nReturn the indices `[i, j]` (i < j) of the two numbers that add up to `target`. Exactly one solution exists. Aim for O(n) time.\n\nExample\n- nums = [2, 7, 11, 15], target = 9 -> [0, 1]",
+  "starterCode": "import java.util.*;\n\npublic class Solution {\n\n    public int[] twoSum(int[] nums, int target) {\n        // TODO: implement\n        return new int[0];\n    }\n}\n",
+  "referenceSolution": "import java.util.*;\n\npublic class Solution {\n    public int[] twoSum(int[] nums, int target) {\n        Map<Integer, Integer> seen = new HashMap<>();\n        for (int i = 0; i < nums.length; i++) {\n            Integer j = seen.get(target - nums[i]);\n            if (j != null) return new int[]{j, i};\n            seen.put(nums[i], i);\n        }\n        return new int[0];\n    }\n}\n",
+  "testCases": [
+   {
+    "name": "Example",
+    "call": "new Solution().twoSum(new int[]{2,7,11,15}, 9)",
+    "expected": "new int[]{0,1}",
+    "hidden": false
+   },
+   {
+    "name": "Middle pair",
+    "call": "new Solution().twoSum(new int[]{3,2,4}, 6)",
+    "expected": "new int[]{1,2}",
+    "hidden": false
+   },
+   {
+    "name": "Duplicates",
+    "call": "new Solution().twoSum(new int[]{3,3}, 6)",
+    "expected": "new int[]{0,1}",
+    "hidden": true
+   },
+   {
+    "name": "Negatives",
+    "call": "new Solution().twoSum(new int[]{-4,10,5,-1}, 1)",
+    "expected": "new int[]{0,2}",
+    "hidden": true
+   },
+   {
+    "name": "Large input",
+    "call": "int n = 200000; int[] a = new int[n]; for (int i = 0; i < n; i++) a[i] = i; return new Solution().twoSum(a, 399997);",
+    "expected": "new int[]{199998,199999}",
+    "hidden": true
+   }
+  ]
+ },
+ {
+  "title": "First unique transaction code",
+  "band": "0-5",
+  "difficulty": "EASY",
+  "topic": "Collections",
+  "suggestedMinutes": 15,
+  "description": "Implement `firstUniqueIndex(String s)` in class `Solution`.\n\nReturn the index of the first character that appears exactly once in `s`, or -1 if there is none.\n\nExamples\n- \"swiftcode\" -> 0 ('s')\n- \"aabbcdd\" -> 4 ('c')\n- \"aabb\" -> -1",
+  "starterCode": "public class Solution {\n\n    public int firstUniqueIndex(String s) {\n        // TODO: implement\n        return -1;\n    }\n}\n",
+  "referenceSolution": "import java.util.*;\n\npublic class Solution {\n    public int firstUniqueIndex(String s) {\n        Map<Character, Integer> count = new HashMap<>();\n        for (char c : s.toCharArray()) count.merge(c, 1, Integer::sum);\n        for (int i = 0; i < s.length(); i++) if (count.get(s.charAt(i)) == 1) return i;\n        return -1;\n    }\n}\n",
+  "testCases": [
+   {
+    "name": "First char",
+    "call": "new Solution().firstUniqueIndex(\"swiftcode\")",
+    "expected": "0",
+    "hidden": false
+   },
+   {
+    "name": "Middle",
+    "call": "new Solution().firstUniqueIndex(\"aabbcdd\")",
+    "expected": "4",
+    "hidden": false
+   },
+   {
+    "name": "None",
+    "call": "new Solution().firstUniqueIndex(\"aabb\")",
+    "expected": "-1",
+    "hidden": false
+   },
+   {
+    "name": "Empty",
+    "call": "new Solution().firstUniqueIndex(\"\")",
+    "expected": "-1",
+    "hidden": true
+   },
+   {
+    "name": "Last char",
+    "call": "new Solution().firstUniqueIndex(\"xxyyz\")",
+    "expected": "4",
+    "hidden": true
+   }
+  ]
+ },
+ {
+  "title": "Totals by account",
+  "band": "6-10",
+  "difficulty": "MEDIUM",
+  "topic": "Java 8+",
+  "suggestedMinutes": 20,
+  "description": "Implement `totalsByAccount(List<String> txns)` in class `Solution`.\n\nEach entry has the form `ACCOUNT:TYPE:AMOUNT` where TYPE is `CR` (credit) or `DR` (debit) and AMOUNT is a whole number of cents. Return a `Map<String, Long>` of the net balance change per account (credits positive, debits negative). Ignore malformed entries. Streams are encouraged.\n\nExample\n- [\"A1:CR:500\", \"A2:DR:200\", \"A1:DR:150\"] -> {A1=350, A2=-200}",
+  "starterCode": "import java.util.*;\nimport java.util.stream.*;\n\npublic class Solution {\n\n    public Map<String, Long> totalsByAccount(List<String> txns) {\n        // TODO: implement\n        return new HashMap<>();\n    }\n}\n",
+  "referenceSolution": "import java.util.*;\nimport java.util.stream.*;\n\npublic class Solution {\n    public Map<String, Long> totalsByAccount(List<String> txns) {\n        return txns.stream()\n                .map(t -> t.split(\":\"))\n                .filter(p -> p.length == 3 && (p[1].equals(\"CR\") || p[1].equals(\"DR\")) && p[2].matches(\"\\\\d+\"))\n                .collect(Collectors.groupingBy(p -> p[0],\n                        Collectors.summingLong(p -> (p[1].equals(\"CR\") ? 1 : -1) * Long.parseLong(p[2]))));\n    }\n}\n",
+  "testCases": [
+   {
+    "name": "Example",
+    "call": "new Solution().totalsByAccount(List.of(\"A1:CR:500\", \"A2:DR:200\", \"A1:DR:150\"))",
+    "expected": "Map.of(\"A1\", 350L, \"A2\", -200L)",
+    "hidden": false
+   },
+   {
+    "name": "Single account",
+    "call": "new Solution().totalsByAccount(List.of(\"X:CR:1\", \"X:CR:2\", \"X:DR:3\"))",
+    "expected": "Map.of(\"X\", 0L)",
+    "hidden": false
+   },
+   {
+    "name": "Malformed ignored",
+    "call": "new Solution().totalsByAccount(List.of(\"A:CR:10\", \"bad\", \"B:XX:5\", \"C:DR:abc\"))",
+    "expected": "Map.of(\"A\", 10L)",
+    "hidden": true
+   },
+   {
+    "name": "Empty list",
+    "call": "new Solution().totalsByAccount(List.of())",
+    "expected": "Map.of()",
+    "hidden": true
+   }
+  ]
+ },
+ {
+  "title": "LRU cache",
+  "band": "6-10",
+  "difficulty": "MEDIUM",
+  "topic": "Collections",
+  "suggestedMinutes": 25,
+  "description": "Implement class `LRUCache` with:\n- `LRUCache(int capacity)`\n- `int get(int key)` returns the value or -1 if absent\n- `void put(int key, int value)` inserts or updates; when capacity is exceeded evict the least recently used entry\n\nBoth operations should be O(1). Keep the class non-public (it lives in Solution.java).",
+  "starterCode": "import java.util.*;\n\nclass LRUCache {\n\n    public LRUCache(int capacity) {\n        // TODO\n    }\n\n    public int get(int key) {\n        // TODO\n        return -1;\n    }\n\n    public void put(int key, int value) {\n        // TODO\n    }\n}\n",
+  "referenceSolution": "import java.util.*;\n\nclass LRUCache extends LinkedHashMap<Integer, Integer> {\n    private final int capacity;\n\n    public LRUCache(int capacity) {\n        super(16, 0.75f, true);\n        this.capacity = capacity;\n    }\n\n    public int get(int key) { return getOrDefault(key, -1); }\n\n    public void put(int key, int value) { super.put(key, value); }\n\n    @Override\n    protected boolean removeEldestEntry(Map.Entry<Integer, Integer> e) { return size() > capacity; }\n}\n",
+  "testCases": [
+   {
+    "name": "Evicts least recent",
+    "call": "LRUCache c = new LRUCache(2); c.put(1, 1); c.put(2, 2); c.get(1); c.put(3, 3); return c.get(2);",
+    "expected": "-1",
+    "hidden": false
+   },
+   {
+    "name": "Keeps recently used",
+    "call": "LRUCache c = new LRUCache(2); c.put(1, 1); c.put(2, 2); c.get(1); c.put(3, 3); return c.get(1);",
+    "expected": "1",
+    "hidden": false
+   },
+   {
+    "name": "Update refreshes",
+    "call": "LRUCache c = new LRUCache(2); c.put(1, 1); c.put(2, 2); c.put(1, 10); c.put(3, 3); return c.get(1) + c.get(2);",
+    "expected": "9",
+    "hidden": true
+   },
+   {
+    "name": "Capacity one",
+    "call": "LRUCache c = new LRUCache(1); c.put(1, 1); c.put(2, 2); return c.get(1) + \",\" + c.get(2);",
+    "expected": "\"-1,2\"",
+    "hidden": true
+   }
+  ]
+ },
+ {
+  "title": "Duplicate payment detection",
+  "band": "6-10",
+  "difficulty": "MEDIUM",
+  "topic": "Collections",
+  "suggestedMinutes": 20,
+  "description": "Implement `findDuplicates(List<String> paymentIds)` in class `Solution`.\n\nReturn the payment IDs that occur more than once, each reported once, in the order in which the second occurrence is seen.\n\nExample\n- [\"P1\",\"P2\",\"P1\",\"P3\",\"P2\",\"P1\"] -> [\"P1\",\"P2\"]",
+  "starterCode": "import java.util.*;\n\npublic class Solution {\n\n    public List<String> findDuplicates(List<String> paymentIds) {\n        // TODO: implement\n        return new ArrayList<>();\n    }\n}\n",
+  "referenceSolution": "import java.util.*;\n\npublic class Solution {\n    public List<String> findDuplicates(List<String> ids) {\n        Set<String> seen = new HashSet<>();\n        Set<String> dup = new LinkedHashSet<>();\n        for (String id : ids) if (!seen.add(id)) dup.add(id);\n        return new ArrayList<>(dup);\n    }\n}\n",
+  "testCases": [
+   {
+    "name": "Example",
+    "call": "new Solution().findDuplicates(List.of(\"P1\",\"P2\",\"P1\",\"P3\",\"P2\",\"P1\"))",
+    "expected": "List.of(\"P1\",\"P2\")",
+    "hidden": false
+   },
+   {
+    "name": "No duplicates",
+    "call": "new Solution().findDuplicates(List.of(\"A\",\"B\"))",
+    "expected": "List.of()",
+    "hidden": false
+   },
+   {
+    "name": "Order of second occurrence",
+    "call": "new Solution().findDuplicates(List.of(\"X\",\"Y\",\"Y\",\"X\"))",
+    "expected": "List.of(\"Y\",\"X\")",
+    "hidden": true
+   },
+   {
+    "name": "Empty",
+    "call": "new Solution().findDuplicates(List.of())",
+    "expected": "List.of()",
+    "hidden": true
+   }
+  ]
+ },
+ {
+  "title": "Merge overlapping settlement windows",
+  "band": "10-15",
+  "difficulty": "MEDIUM",
+  "topic": "Core Java",
+  "suggestedMinutes": 20,
+  "description": "Implement `merge(int[][] intervals)` in class `Solution`.\n\nEach interval is `[start, end]`. Merge all overlapping or touching intervals and return them sorted by start.\n\nExample\n- [[1,3],[8,10],[2,6],[15,18]] -> [[1,6],[8,10],[15,18]]\n- [[1,4],[4,5]] -> [[1,5]]",
+  "starterCode": "import java.util.*;\n\npublic class Solution {\n\n    public int[][] merge(int[][] intervals) {\n        // TODO: implement\n        return new int[0][];\n    }\n}\n",
+  "referenceSolution": "import java.util.*;\n\npublic class Solution {\n    public int[][] merge(int[][] intervals) {\n        if (intervals.length == 0) return new int[0][];\n        int[][] a = intervals.clone();\n        Arrays.sort(a, Comparator.comparingInt(x -> x[0]));\n        List<int[]> out = new ArrayList<>();\n        int[] cur = a[0].clone();\n        for (int i = 1; i < a.length; i++) {\n            if (a[i][0] <= cur[1]) cur[1] = Math.max(cur[1], a[i][1]);\n            else { out.add(cur); cur = a[i].clone(); }\n        }\n        out.add(cur);\n        return out.toArray(new int[0][]);\n    }\n}\n",
+  "testCases": [
+   {
+    "name": "Example",
+    "call": "new Solution().merge(new int[][]{{1,3},{8,10},{2,6},{15,18}})",
+    "expected": "new int[][]{{1,6},{8,10},{15,18}}",
+    "hidden": false
+   },
+   {
+    "name": "Touching",
+    "call": "new Solution().merge(new int[][]{{1,4},{4,5}})",
+    "expected": "new int[][]{{1,5}}",
+    "hidden": false
+   },
+   {
+    "name": "Contained",
+    "call": "new Solution().merge(new int[][]{{1,10},{2,3},{4,5}})",
+    "expected": "new int[][]{{1,10}}",
+    "hidden": true
+   },
+   {
+    "name": "Empty",
+    "call": "new Solution().merge(new int[0][])",
+    "expected": "new int[0][]",
+    "hidden": true
+   }
+  ]
+ },
+ {
+  "title": "Token bucket rate limiter",
+  "band": "10-15",
+  "difficulty": "HARD",
+  "topic": "Concurrency",
+  "suggestedMinutes": 30,
+  "description": "Implement class `RateLimiter` (non-public, in Solution.java):\n- `RateLimiter(int capacity, int refillPerSecond)` starts with a full bucket\n- `boolean allow(long nowMillis)` returns true and consumes a token if one is available\n\nTokens refill continuously at `refillPerSecond` and never exceed `capacity`. Time is passed in explicitly so behaviour is deterministic. Make `allow` thread-safe.",
+  "starterCode": "class RateLimiter {\n\n    public RateLimiter(int capacity, int refillPerSecond) {\n        // TODO\n    }\n\n    public synchronized boolean allow(long nowMillis) {\n        // TODO\n        return false;\n    }\n}\n",
+  "referenceSolution": "class RateLimiter {\n    private final int capacity;\n    private final double perMs;\n    private double tokens;\n    private long last = -1;\n\n    public RateLimiter(int capacity, int refillPerSecond) {\n        this.capacity = capacity;\n        this.perMs = refillPerSecond / 1000.0;\n        this.tokens = capacity;\n    }\n\n    public synchronized boolean allow(long now) {\n        if (last >= 0 && now > last) tokens = Math.min(capacity, tokens + (now - last) * perMs);\n        if (last < 0 || now > last) last = now;\n        if (tokens >= 1) { tokens -= 1; return true; }\n        return false;\n    }\n}\n",
+  "testCases": [
+   {
+    "name": "Burst up to capacity",
+    "call": "RateLimiter r = new RateLimiter(3, 1); int ok = 0; for (int i = 0; i < 5; i++) if (r.allow(1000)) ok++; return ok;",
+    "expected": "3",
+    "hidden": false
+   },
+   {
+    "name": "Refills over time",
+    "call": "RateLimiter r = new RateLimiter(2, 1); r.allow(0); r.allow(0); boolean before = r.allow(500); boolean after = r.allow(1000); return before + \",\" + after;",
+    "expected": "\"false,true\"",
+    "hidden": false
+   },
+   {
+    "name": "Never exceeds capacity",
+    "call": "RateLimiter r = new RateLimiter(2, 10); int ok = 0; for (int i = 0; i < 5; i++) if (r.allow(60000)) ok++; return ok;",
+    "expected": "2",
+    "hidden": true
+   },
+   {
+    "name": "Steady rate",
+    "call": "RateLimiter r = new RateLimiter(1, 2); int ok = 0; for (long t = 0; t <= 2000; t += 100) if (r.allow(t)) ok++; return ok;",
+    "expected": "5",
+    "hidden": true
+   }
+  ]
+ },
+ {
+  "title": "Top K frequent error codes",
+  "band": "10-15",
+  "difficulty": "MEDIUM",
+  "topic": "Java 8+",
+  "suggestedMinutes": 20,
+  "description": "Implement `topK(String[] codes, int k)` in class `Solution`.\n\nReturn the `k` most frequent codes, ordered by frequency descending and, for ties, alphabetically ascending.\n\nExample\n- [\"E42\",\"E17\",\"E42\",\"E99\",\"E17\",\"E42\"], k = 2 -> [\"E42\",\"E17\"]",
+  "starterCode": "import java.util.*;\nimport java.util.stream.*;\n\npublic class Solution {\n\n    public List<String> topK(String[] codes, int k) {\n        // TODO: implement\n        return new ArrayList<>();\n    }\n}\n",
+  "referenceSolution": "import java.util.*;\nimport java.util.stream.*;\n\npublic class Solution {\n    public List<String> topK(String[] codes, int k) {\n        Map<String, Long> freq = Arrays.stream(codes).collect(Collectors.groupingBy(c -> c, Collectors.counting()));\n        return freq.entrySet().stream()\n                .sorted(Map.Entry.<String, Long>comparingByValue().reversed().thenComparing(Map.Entry.comparingByKey()))\n                .limit(k).map(Map.Entry::getKey).collect(Collectors.toList());\n    }\n}\n",
+  "testCases": [
+   {
+    "name": "Example",
+    "call": "new Solution().topK(new String[]{\"E42\",\"E17\",\"E42\",\"E99\",\"E17\",\"E42\"}, 2)",
+    "expected": "List.of(\"E42\",\"E17\")",
+    "hidden": false
+   },
+   {
+    "name": "Tie broken alphabetically",
+    "call": "new Solution().topK(new String[]{\"B\",\"A\",\"C\",\"B\",\"A\"}, 2)",
+    "expected": "List.of(\"A\",\"B\")",
+    "hidden": false
+   },
+   {
+    "name": "k larger than distinct",
+    "call": "new Solution().topK(new String[]{\"X\"}, 3)",
+    "expected": "List.of(\"X\")",
+    "hidden": true
+   },
+   {
+    "name": "Three-way tie",
+    "call": "new Solution().topK(new String[]{\"c\",\"b\",\"a\"}, 2)",
+    "expected": "List.of(\"a\",\"b\")",
+    "hidden": true
+   }
+  ]
+ },
+ {
+  "title": "Service startup order",
+  "band": "15+",
+  "difficulty": "HARD",
+  "topic": "System Design",
+  "suggestedMinutes": 30,
+  "description": "Implement `startupOrder(Map<String, List<String>> deps)` in class `Solution`.\n\n`deps` maps each service to the services it depends on (which must start first). Services that only appear as dependencies must also be started. Return a valid start order; when several services are ready at the same time, start them in alphabetical order. If there is a cycle, throw `IllegalStateException`.\n\nExample\n- {\"payments\": [\"ledger\",\"auth\"], \"ledger\": [\"db\"], \"auth\": [\"db\"]} -> [\"db\",\"auth\",\"ledger\",\"payments\"]",
+  "starterCode": "import java.util.*;\n\npublic class Solution {\n\n    public List<String> startupOrder(Map<String, List<String>> deps) {\n        // TODO: implement (topological sort)\n        return new ArrayList<>();\n    }\n}\n",
+  "referenceSolution": "import java.util.*;\n\npublic class Solution {\n    public List<String> startupOrder(Map<String, List<String>> deps) {\n        Map<String, Integer> indeg = new TreeMap<>();\n        Map<String, List<String>> users = new HashMap<>();\n        deps.forEach((svc, ds) -> {\n            indeg.putIfAbsent(svc, 0);\n            for (String d : ds) {\n                indeg.putIfAbsent(d, 0);\n                indeg.merge(svc, 1, Integer::sum);\n                users.computeIfAbsent(d, k -> new ArrayList<>()).add(svc);\n            }\n        });\n        PriorityQueue<String> ready = new PriorityQueue<>();\n        indeg.forEach((s, n) -> { if (n == 0) ready.add(s); });\n        List<String> order = new ArrayList<>();\n        while (!ready.isEmpty()) {\n            String s = ready.poll();\n            order.add(s);\n            for (String u : users.getOrDefault(s, List.of())) if (indeg.merge(u, -1, Integer::sum) == 0) ready.add(u);\n        }\n        if (order.size() != indeg.size()) throw new IllegalStateException(\"cycle\");\n        return order;\n    }\n}\n",
+  "testCases": [
+   {
+    "name": "Example",
+    "call": "new Solution().startupOrder(Map.of(\"payments\", List.of(\"ledger\",\"auth\"), \"ledger\", List.of(\"db\"), \"auth\", List.of(\"db\")))",
+    "expected": "List.of(\"db\",\"auth\",\"ledger\",\"payments\")",
+    "hidden": false
+   },
+   {
+    "name": "Independent services",
+    "call": "new Solution().startupOrder(Map.of(\"b\", List.of(), \"a\", List.of()))",
+    "expected": "List.of(\"a\",\"b\")",
+    "hidden": false
+   },
+   {
+    "name": "Cycle detected",
+    "call": "try { new Solution().startupOrder(Map.of(\"a\", List.of(\"b\"), \"b\", List.of(\"a\"))); return \"no error\"; } catch (IllegalStateException e) { return \"cycle\"; }",
+    "expected": "\"cycle\"",
+    "hidden": true
+   },
+   {
+    "name": "Chain",
+    "call": "new Solution().startupOrder(Map.of(\"c\", List.of(\"b\"), \"b\", List.of(\"a\")))",
+    "expected": "List.of(\"a\",\"b\",\"c\")",
+    "hidden": true
+   }
+  ]
+ },
+ {
+  "title": "Circuit breaker state machine",
+  "band": "15+",
+  "difficulty": "HARD",
+  "topic": "Microservices",
+  "suggestedMinutes": 30,
+  "description": "Implement class `CircuitBreaker` (non-public, in Solution.java):\n- `CircuitBreaker(int failureThreshold, long openMillis)`\n- `boolean allowRequest(long now)`\n- `void recordSuccess()`\n- `void recordFailure(long now)`\n- `String state()` returns \"CLOSED\", \"OPEN\" or \"HALF_OPEN\"\n\nRules: starts CLOSED. `failureThreshold` consecutive failures open the breaker. While OPEN, requests are rejected until `openMillis` have passed since opening; the next `allowRequest` then moves to HALF_OPEN and allows exactly one trial request (further requests are rejected until it completes). A success in HALF_OPEN closes the breaker and resets failures; a failure reopens it. A success in CLOSED resets the failure count.",
+  "starterCode": "class CircuitBreaker {\n\n    public CircuitBreaker(int failureThreshold, long openMillis) {\n        // TODO\n    }\n\n    public synchronized boolean allowRequest(long now) {\n        // TODO\n        return true;\n    }\n\n    public synchronized void recordSuccess() {\n        // TODO\n    }\n\n    public synchronized void recordFailure(long now) {\n        // TODO\n    }\n\n    public synchronized String state() {\n        return \"CLOSED\";\n    }\n}\n",
+  "referenceSolution": "class CircuitBreaker {\n    private final int threshold;\n    private final long openMillis;\n    private String state = \"CLOSED\";\n    private int failures;\n    private long openedAt;\n    private boolean trialInFlight;\n\n    public CircuitBreaker(int failureThreshold, long openMillis) {\n        this.threshold = failureThreshold;\n        this.openMillis = openMillis;\n    }\n\n    public synchronized boolean allowRequest(long now) {\n        switch (state) {\n            case \"CLOSED\": return true;\n            case \"OPEN\":\n                if (now - openedAt >= openMillis) { state = \"HALF_OPEN\"; trialInFlight = true; return true; }\n                return false;\n            default:\n                if (trialInFlight) return false;\n                trialInFlight = true;\n                return true;\n        }\n    }\n\n    public synchronized void recordSuccess() {\n        failures = 0;\n        trialInFlight = false;\n        state = \"CLOSED\";\n    }\n\n    public synchronized void recordFailure(long now) {\n        trialInFlight = false;\n        if (state.equals(\"HALF_OPEN\")) { state = \"OPEN\"; openedAt = now; return; }\n        failures++;\n        if (failures >= threshold) { state = \"OPEN\"; openedAt = now; }\n    }\n\n    public synchronized String state() { return state; }\n}\n",
+  "testCases": [
+   {
+    "name": "Opens after threshold",
+    "call": "CircuitBreaker b = new CircuitBreaker(3, 1000); for (int i = 0; i < 3; i++) b.recordFailure(0); return b.state() + \",\" + b.allowRequest(10);",
+    "expected": "\"OPEN,false\"",
+    "hidden": false
+   },
+   {
+    "name": "Half-open after wait",
+    "call": "CircuitBreaker b = new CircuitBreaker(1, 1000); b.recordFailure(0); boolean first = b.allowRequest(1000); boolean second = b.allowRequest(1001); return b.state() + \",\" + first + \",\" + second;",
+    "expected": "\"HALF_OPEN,true,false\"",
+    "hidden": false
+   },
+   {
+    "name": "Success closes",
+    "call": "CircuitBreaker b = new CircuitBreaker(1, 100); b.recordFailure(0); b.allowRequest(200); b.recordSuccess(); return b.state() + \",\" + b.allowRequest(201);",
+    "expected": "\"CLOSED,true\"",
+    "hidden": true
+   },
+   {
+    "name": "Trial failure reopens",
+    "call": "CircuitBreaker b = new CircuitBreaker(1, 100); b.recordFailure(0); b.allowRequest(100); b.recordFailure(150); return b.state() + \",\" + b.allowRequest(200) + \",\" + b.allowRequest(250);",
+    "expected": "\"OPEN,false,true\"",
+    "hidden": true
+   },
+   {
+    "name": "Success resets count",
+    "call": "CircuitBreaker b = new CircuitBreaker(2, 100); b.recordFailure(0); b.recordSuccess(); b.recordFailure(1); return b.state();",
+    "expected": "\"CLOSED\"",
+    "hidden": true
+   }
+  ]
+ }
+]

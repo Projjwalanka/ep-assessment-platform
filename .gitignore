@@ -1,0 +1,10 @@
+node_modules/
+frontend/dist/
+backend/target/
+backend/data/
+data/
+*.mv.db
+*.trace.db
+.idea/
+*.iml
+.vscode/
