@@ -12,7 +12,7 @@ services:
       - key: ADMIN_PASSWORD
         generateValue: true   # find it under the service's Environment tab
       - key: SEED_DEMO
-        value: "true"         # set to "false" before real use, on a fresh database
+        value: "false"         # set to "false" before real use, on a fresh database
       - key: RUNNER_MAX_PARALLEL
         value: "1"
     # A persistent disk keeps the H2 database across deploys and restarts. Disks need a paid plan.
